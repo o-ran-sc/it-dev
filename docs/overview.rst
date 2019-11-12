@@ -7,6 +7,11 @@
 Overview
 ======================
 
-This repo is used by the O-RAN SC Integration and Testing project for hosting miscellaneous development codes.
+The it/dev repo is used by the O-RAN SC Integration and Testing project for hosting miscellaneous development codes.
 
-For Amber release this repo contains files for developing Near Realtime RAN Intelligent Controller applications.
+For Amber release this repo contains integration artifacts for developing Near Realtime RAN Intelligent Controller applications (xApps).
+
+Because the life cycles of Near Realtime RIC xApps are managed by Near Realtime RIC 
+Platform, the xApps are expect to conform with certain behavioral patterns and provide
+well-described interfaces.  The artifacts here help the xApp developers to generate (Near Realtime) RIC Platform deployment ready Helm charts for their xApps.
+

@@ -4,8 +4,8 @@
 .. Copyright (C) 2019 AT&T Intellectual Property
 
 
-Welcome to O-RAN SC it/dev Documentation
-===========================================
+Welcome to O-RAN SC Integratoin for xApp Development Documentation
+==================================================================
 
 .. toctree::
    :maxdepth: 2
@@ -14,7 +14,6 @@ Welcome to O-RAN SC it/dev Documentation
    overview.rst
    developer-guide.rst
    release-notes.rst
-
 
 * :ref:`genindex`
 * :ref:`modindex`
