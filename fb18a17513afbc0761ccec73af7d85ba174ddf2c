@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4beef7c0_1453360f",
+        "filename": "HelmManager/api/api_server.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1000014
+      },
+      "writtenOn": "2020-03-09T20:06:14Z",
+      "side": 1,
+      "message": "Source code files DO need a license header",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 1,
+        "endChar": 2
+      },
+      "revId": "fb18a17513afbc0761ccec73af7d85ba174ddf2c",
+      "serverId": "84e4e190-e623-4c37-9eda-58b1937c1b53",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "1f42cff4_b4d274a2",
+        "filename": "README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1000014
+      },
+      "writtenOn": "2020-03-09T20:06:14Z",
+      "side": 1,
+      "message": "This is still the it/dev repo.  I don\u0027t think you should put Helm Manager as the only entry in the README",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 2,
+        "endChar": 12
+      },
+      "revId": "fb18a17513afbc0761ccec73af7d85ba174ddf2c",
+      "serverId": "84e4e190-e623-4c37-9eda-58b1937c1b53",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "8fbfc5cb_835dbe61",
+        "filename": "ci/package-tag.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1000014
+      },
+      "writtenOn": "2020-03-09T20:06:14Z",
+      "side": 1,
+      "message": "don\u0027t need all this license stuff on a one-line file",
+      "range": {
+        "startLine": 2,
+        "startChar": 0,
+        "endLine": 16,
+        "endChar": 26
+      },
+      "revId": "fb18a17513afbc0761ccec73af7d85ba174ddf2c",
+      "serverId": "84e4e190-e623-4c37-9eda-58b1937c1b53",
+      "unresolved": true
+    }
+  ]
+}
