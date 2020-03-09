@@ -1,0 +1,79 @@
+################################################################################
+#   Copyright (c) 2019 AT&T Intellectual Property.                             #
+#                                                                              #
+#   Licensed under the Apache License, Version 2.0 (the "License");            #
+#   you may not use this file except in compliance with the License.           #
+#   You may obtain a copy of the License at                                    #
+#                                                                              #
+#       http://www.apache.org/licenses/LICENSE-2.0                             #
+#                                                                              #
+#   Unless required by applicable law or agreed to in writing, software        #
+#   distributed under the License is distributed on an "AS IS" BASIS,          #
+#   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.   #
+#   See the License for the specific language governing permissions and        #
+#   limitations under the License.                                             #
+################################################################################'
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "ricxapp.fullname" . }}
+  labels:
+    app: {{ include "ricxapp.namespace" . }}-{{ include "ricxapp.name" . }}
+    chart: {{ .Chart.Name }}-{{ .Chart.Version | replace "+" "_" }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: {{ include "ricxapp.namespace" . }}-{{ include "ricxapp.name" . }}
+      release: {{ .Release.Name }}
+  template:
+    metadata:
+      labels:
+        app: {{ include "ricxapp.namespace" . }}-{{ include "ricxapp.name" . }}
+        release: {{ .Release.Name }}
+    spec:
+      hostname: {{ include "ricxapp.name" . }}
+      imagePullSecrets:
+{{- range .Values.containers }}
+        - name: {{ .image.registry | replace "." "-" | replace ":" "-" | replace "/" "-" | trunc 63 | trimSuffix "-" }}
+{{- end }}
+      volumes:
+        - name: config-volume
+          configMap:
+            name: {{ include "ricxapp.configmapname" . }}-appconfig
+      containers:
+{{- range .Values.containers }}
+        - name: {{ .name }}
+          image: "{{ .image.registry }}/{{ .image.name }}:{{ .image.tag }}"
+          {{- if .command }}
+          command: [{{ .command }}]
+          {{- end}}
+          imagePullPolicy: {{ $.Values.image_pull_policy }}
+          {{- if .ports }}
+          ports:
+            {{- if .ports.http }}
+            - name: http_{{ .name }}
+              containerPort: {{ .ports.http }}
+              protocol: TCP
+            {{- end }}
+            {{- if .ports.rmr_data }}
+            - name: rmrdata_{{ .name }}
+              containerPort: {{ .ports.rmr_data }}
+              protocol: TCP
+            {{- end }}
+            {{- if .ports.rmr_route }}
+            - name: rmrroute_{{ .name }}
+              containerPort: {{ .ports.rmr_route }}
+              protocol: TCP
+            {{- end }}
+          {{- end }}
+{{- end }}
+          volumeMounts:
+            - name: config-volume
+              mountPath: {{ .Values.appconfig.path }}
+          envFrom:
+            - configMapRef:
+                name: {{ include "ricxapp.configmapname" . }}-appenv
+          restartPolicy: Always
