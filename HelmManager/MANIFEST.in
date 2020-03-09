@@ -1,0 +1,10 @@
+recursive-include HelmManager *.py
+recursive-include HelmManager *.yaml
+recursive-include HelmManager *.tpl
+recursive-include HelmManager *.conf
+recursive-include HelmManager *.pickle
+include HelmManager/cli
+include HelmManager/HelmManager
+include README.md
+include LICENSES.txt
+include requirements.txt
