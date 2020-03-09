@@ -1,1 +1,5 @@
-This repo holds various integration and testing development codes.
+Helm Manager
+============
+
+This repository contains code for RIC xApp helm chart manager.
+
