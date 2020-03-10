@@ -1,0 +1,268 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "385736a4_433d74bb",
+        "filename": "HelmManager/HelmManager/api/endpoints/charts_ep.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1000014
+      },
+      "writtenOn": "2020-03-10T20:14:22Z",
+      "side": 1,
+      "message": "why an empty route?",
+      "range": {
+        "startLine": 28,
+        "startChar": 1,
+        "endLine": 28,
+        "endChar": 13
+      },
+      "revId": "f553f6678ff74bf0c3558d7436490198e92f6c36",
+      "serverId": "84e4e190-e623-4c37-9eda-58b1937c1b53",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b64ec711_b3597c3d",
+        "filename": "HelmManager/HelmManager/api/endpoints/charts_ep.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 1000014
+      },
+      "writtenOn": "2020-03-10T20:14:22Z",
+      "side": 1,
+      "message": "suggest using \u0027/xapp/\u003cstring:xapp-chart_name\u003e/ver/\u003cxtring:version\u003e\u0027 as we discussed earlier today",
+      "range": {
+        "startLine": 52,
+        "startChar": 11,
+        "endLine": 52,
+        "endChar": 54
+      },
+      "revId": "f553f6678ff74bf0c3558d7436490198e92f6c36",
+      "serverId": "84e4e190-e623-4c37-9eda-58b1937c1b53",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "d9431bef_718ea73c",
+        "filename": "HelmManager/HelmManager/api/endpoints/charts_ep.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 75,
+      "author": {
+        "id": 1000014
+      },
+      "writtenOn": "2020-03-10T20:14:22Z",
+      "side": 1,
+      "message": "Similar to above, suggest using keys to identify the path parameters, not just position.",
+      "range": {
+        "startLine": 75,
+        "startChar": 0,
+        "endLine": 75,
+        "endChar": 1
+      },
+      "revId": "f553f6678ff74bf0c3558d7436490198e92f6c36",
+      "serverId": "84e4e190-e623-4c37-9eda-58b1937c1b53",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "c9a5259c_02732baa",
+        "filename": "HelmManager/HelmManager/api/endpoints/charts_ep.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 92,
+      "author": {
+        "id": 1000014
+      },
+      "writtenOn": "2020-03-10T20:14:22Z",
+      "side": 1,
+      "message": "Why so many empty lines?",
+      "revId": "f553f6678ff74bf0c3558d7436490198e92f6c36",
+      "serverId": "84e4e190-e623-4c37-9eda-58b1937c1b53",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "f1a64969_08d7d745",
+        "filename": "HelmManager/HelmManager/api/onboard.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 1000014
+      },
+      "writtenOn": "2020-03-10T20:14:22Z",
+      "side": 1,
+      "message": "Could have log.debug here, that would be helpful",
+      "range": {
+        "startLine": 37,
+        "startChar": 0,
+        "endLine": 37,
+        "endChar": 1
+      },
+      "revId": "f553f6678ff74bf0c3558d7436490198e92f6c36",
+      "serverId": "84e4e190-e623-4c37-9eda-58b1937c1b53",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "ce5a0608_a99c38b8",
+        "filename": "HelmManager/HelmManager/api/onboard.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 1000014
+      },
+      "writtenOn": "2020-03-10T20:14:22Z",
+      "side": 1,
+      "message": "On error use log.error, right?",
+      "range": {
+        "startLine": 40,
+        "startChar": 12,
+        "endLine": 40,
+        "endChar": 17
+      },
+      "revId": "f553f6678ff74bf0c3558d7436490198e92f6c36",
+      "serverId": "84e4e190-e623-4c37-9eda-58b1937c1b53",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "2e74c132_741a53f6",
+        "filename": "HelmManager/HelmManager/api/onboard.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 1000014
+      },
+      "writtenOn": "2020-03-10T20:14:22Z",
+      "side": 1,
+      "message": "I recommend you define a method that creates the response object instead of hardcoding its structure repeatedly.",
+      "range": {
+        "startLine": 75,
+        "startChar": 24,
+        "endLine": 76,
+        "endChar": 74
+      },
+      "revId": "f553f6678ff74bf0c3558d7436490198e92f6c36",
+      "serverId": "84e4e190-e623-4c37-9eda-58b1937c1b53",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "a04687c6_f169f91c",
+        "filename": "HelmManager/README.md",
+        "patchSetId": 4
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1000014
+      },
+      "writtenOn": "2020-03-10T20:14:22Z",
+      "side": 1,
+      "message": "directory?",
+      "range": {
+        "startLine": 4,
+        "startChar": 5,
+        "endLine": 4,
+        "endChar": 15
+      },
+      "revId": "f553f6678ff74bf0c3558d7436490198e92f6c36",
+      "serverId": "84e4e190-e623-4c37-9eda-58b1937c1b53",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "0f2cabd1_ed4e979d",
+        "filename": "HelmManager/requirements.txt",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000014
+      },
+      "writtenOn": "2020-03-10T20:14:22Z",
+      "side": 1,
+      "message": "Very smart that you pinned all the versions!",
+      "revId": "f553f6678ff74bf0c3558d7436490198e92f6c36",
+      "serverId": "84e4e190-e623-4c37-9eda-58b1937c1b53",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "c7215174_61cd2386",
+        "filename": "ci/HelmManager/Dockerfile",
+        "patchSetId": 4
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1000014
+      },
+      "writtenOn": "2020-03-10T20:14:22Z",
+      "side": 1,
+      "message": "Avoid frolvlad/*.  Vlad F is almost certainly a perfectly fine dude but I strongly recommend instead\n\n    python:3.7-alpine",
+      "range": {
+        "startLine": 17,
+        "startChar": 5,
+        "endLine": 17,
+        "endChar": 35
+      },
+      "revId": "f553f6678ff74bf0c3558d7436490198e92f6c36",
+      "serverId": "84e4e190-e623-4c37-9eda-58b1937c1b53",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "8d14a069_eda97a28",
+        "filename": "ci/HelmManager/Dockerfile",
+        "patchSetId": 4
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 1000014
+      },
+      "writtenOn": "2020-03-10T20:14:22Z",
+      "side": 1,
+      "message": "see above",
+      "range": {
+        "startLine": 26,
+        "startChar": 5,
+        "endLine": 26,
+        "endChar": 35
+      },
+      "revId": "f553f6678ff74bf0c3558d7436490198e92f6c36",
+      "serverId": "84e4e190-e623-4c37-9eda-58b1937c1b53",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "03491847_1124d9f7",
+        "filename": "ci/HelmManager/Dockerfile",
+        "patchSetId": 4
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 1000014
+      },
+      "writtenOn": "2020-03-10T20:14:22Z",
+      "side": 1,
+      "message": "It\u0027s seriously weird for a linux command-line utility to use upper case in the name.  Suggest helm-manager or ric-xd-manager (xApp descriptor) as we discussed.  Hyphens in names are cool.",
+      "range": {
+        "startLine": 36,
+        "startChar": 13,
+        "endLine": 36,
+        "endChar": 24
+      },
+      "revId": "f553f6678ff74bf0c3558d7436490198e92f6c36",
+      "serverId": "84e4e190-e623-4c37-9eda-58b1937c1b53",
+      "unresolved": true
+    }
+  ]
+}
