@@ -1,0 +1,727 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "972b632a_a57874e4",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 8
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1000014
+      },
+      "writtenOn": "2020-03-13T09:58:39Z",
+      "side": 1,
+      "message": "\"xapp\" (no longer Helm Manager, right?)",
+      "range": {
+        "startLine": 7,
+        "startChar": 17,
+        "endLine": 7,
+        "endChar": 29
+      },
+      "revId": "7df858fb29b229b971fe67d9a1a3cfd8a27c0ec8",
+      "serverId": "84e4e190-e623-4c37-9eda-58b1937c1b53",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "8bc540a4_912a70da",
+        "filename": "ci/xapp_onboarder/Dockerfile",
+        "patchSetId": 8
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1000014
+      },
+      "writtenOn": "2020-03-13T09:58:39Z",
+      "side": 1,
+      "message": "this is not necessary, have not seen labels applied to any other images, what is the purpose?\n\nhttps://docs.docker.com/engine/reference/builder/#label",
+      "range": {
+        "startLine": 19,
+        "startChar": 0,
+        "endLine": 19,
+        "endChar": 3
+      },
+      "revId": "7df858fb29b229b971fe67d9a1a3cfd8a27c0ec8",
+      "serverId": "84e4e190-e623-4c37-9eda-58b1937c1b53",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "0413ec7c_59c1fbf0",
+        "filename": "xapp_onboarder/README.md",
+        "patchSetId": 8
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000014
+      },
+      "writtenOn": "2020-03-13T09:58:39Z",
+      "side": 1,
+      "message": "since this is used as the PyPI long description you *really* need more than a single sentence.  You might take a look at ric-plt/xapp-frame-py or ric-plt/lib/rmr/src/bindings for examples.\n\nI\u0027m happy to fix up your text if that helps.",
+      "revId": "7df858fb29b229b971fe67d9a1a3cfd8a27c0ec8",
+      "serverId": "84e4e190-e623-4c37-9eda-58b1937c1b53",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "83e5e346_46ea208a",
+        "filename": "xapp_onboarder/README.md",
+        "patchSetId": 8
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1000014
+      },
+      "writtenOn": "2020-03-13T09:58:39Z",
+      "side": 1,
+      "message": "pls make line length match text length",
+      "range": {
+        "startLine": 2,
+        "startChar": 0,
+        "endLine": 2,
+        "endChar": 12
+      },
+      "revId": "7df858fb29b229b971fe67d9a1a3cfd8a27c0ec8",
+      "serverId": "84e4e190-e623-4c37-9eda-58b1937c1b53",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "d5a8505d_1eca79e7",
+        "filename": "xapp_onboarder/README.md",
+        "patchSetId": 8
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1000014
+      },
+      "writtenOn": "2020-03-13T09:58:39Z",
+      "side": 1,
+      "message": "directory",
+      "range": {
+        "startLine": 4,
+        "startChar": 5,
+        "endLine": 4,
+        "endChar": 15
+      },
+      "revId": "7df858fb29b229b971fe67d9a1a3cfd8a27c0ec8",
+      "serverId": "84e4e190-e623-4c37-9eda-58b1937c1b53",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "3f57fbe0_3229a7e5",
+        "filename": "xapp_onboarder/tests/test_onboard/test_endpoints.py",
+        "patchSetId": 8
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1000014
+      },
+      "writtenOn": "2020-03-13T09:58:39Z",
+      "side": 1,
+      "message": "please consider moving this test data to a separate file \"config-test.json\" or something and reading it into the test.",
+      "range": {
+        "startLine": 21,
+        "startChar": 0,
+        "endLine": 21,
+        "endChar": 1
+      },
+      "revId": "7df858fb29b229b971fe67d9a1a3cfd8a27c0ec8",
+      "serverId": "84e4e190-e623-4c37-9eda-58b1937c1b53",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "5bcb55a2_46e6febf",
+        "filename": "xapp_onboarder/tox.ini",
+        "patchSetId": 8
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1000014
+      },
+      "writtenOn": "2020-03-13T09:58:39Z",
+      "side": 1,
+      "message": "you may wish to include python 3.6.  LF does not yet support 3.8.",
+      "range": {
+        "startLine": 18,
+        "startChar": 10,
+        "endLine": 18,
+        "endChar": 14
+      },
+      "revId": "7df858fb29b229b971fe67d9a1a3cfd8a27c0ec8",
+      "serverId": "84e4e190-e623-4c37-9eda-58b1937c1b53",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "48e12c23_3826ce9b",
+        "filename": "xapp_onboarder/xapp_onboarder/api/endpoints/charts_ep.py",
+        "patchSetId": 8
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 1000014
+      },
+      "writtenOn": "2020-03-13T09:58:39Z",
+      "side": 1,
+      "message": "Returns the charts for the specified xapp (?)",
+      "range": {
+        "startLine": 48,
+        "startChar": 0,
+        "endLine": 48,
+        "endChar": 1
+      },
+      "revId": "7df858fb29b229b971fe67d9a1a3cfd8a27c0ec8",
+      "serverId": "84e4e190-e623-4c37-9eda-58b1937c1b53",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "3f5e3435_d5a2d914",
+        "filename": "xapp_onboarder/xapp_onboarder/api/endpoints/charts_ep.py",
+        "patchSetId": 8
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 1000014
+      },
+      "writtenOn": "2020-03-13T09:58:39Z",
+      "side": 1,
+      "message": "Returns the chart for the specified app at the specified version\n\n(cannot be a list, right??)",
+      "range": {
+        "startLine": 61,
+        "startChar": 0,
+        "endLine": 61,
+        "endChar": 1
+      },
+      "revId": "7df858fb29b229b971fe67d9a1a3cfd8a27c0ec8",
+      "serverId": "84e4e190-e623-4c37-9eda-58b1937c1b53",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "c66987a0_c0cde272",
+        "filename": "xapp_onboarder/xapp_onboarder/api/endpoints/charts_ep.py",
+        "patchSetId": 8
+      },
+      "lineNbr": 84,
+      "author": {
+        "id": 1000014
+      },
+      "writtenOn": "2020-03-13T09:58:39Z",
+      "side": 1,
+      "message": "Returns the values.yaml file from the chart for the specified app and version",
+      "range": {
+        "startLine": 84,
+        "startChar": 0,
+        "endLine": 84,
+        "endChar": 1
+      },
+      "revId": "7df858fb29b229b971fe67d9a1a3cfd8a27c0ec8",
+      "serverId": "84e4e190-e623-4c37-9eda-58b1937c1b53",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b66e3f3b_02fa546f",
+        "filename": "xapp_onboarder/xapp_onboarder/api/endpoints/onboard_ep.py",
+        "patchSetId": 8
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 1000014
+      },
+      "writtenOn": "2020-03-13T09:58:39Z",
+      "side": 1,
+      "message": "Please add a few more words of description; like without xapp descriptor (??)",
+      "range": {
+        "startLine": 48,
+        "startChar": 8,
+        "endLine": 48,
+        "endChar": 20
+      },
+      "revId": "7df858fb29b229b971fe67d9a1a3cfd8a27c0ec8",
+      "serverId": "84e4e190-e623-4c37-9eda-58b1937c1b53",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "1aaac4eb_5a714322",
+        "filename": "xapp_onboarder/xapp_onboarder/api/endpoints/onboard_ep.py",
+        "patchSetId": 8
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 1000014
+      },
+      "writtenOn": "2020-03-13T09:58:39Z",
+      "side": 1,
+      "message": "what is remote about it?",
+      "range": {
+        "startLine": 65,
+        "startChar": 26,
+        "endLine": 65,
+        "endChar": 32
+      },
+      "revId": "7df858fb29b229b971fe67d9a1a3cfd8a27c0ec8",
+      "serverId": "84e4e190-e623-4c37-9eda-58b1937c1b53",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "6c907060_84241fd3",
+        "filename": "xapp_onboarder/xapp_onboarder/api/models/request_models.py",
+        "patchSetId": 8
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1000014
+      },
+      "writtenOn": "2020-03-13T09:58:39Z",
+      "side": 1,
+      "message": "what is this enormous regex?  Is this a semantic version matcher?",
+      "range": {
+        "startLine": 25,
+        "startChar": 46,
+        "endLine": 25,
+        "endChar": 228
+      },
+      "revId": "7df858fb29b229b971fe67d9a1a3cfd8a27c0ec8",
+      "serverId": "84e4e190-e623-4c37-9eda-58b1937c1b53",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "2114604b_cfc8260e",
+        "filename": "xapp_onboarder/xapp_onboarder/api/onboard.py",
+        "patchSetId": 8
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 1000014
+      },
+      "writtenOn": "2020-03-13T09:58:39Z",
+      "side": 1,
+      "message": "on error the log level should be error, not debug",
+      "range": {
+        "startLine": 42,
+        "startChar": 12,
+        "endLine": 42,
+        "endChar": 17
+      },
+      "revId": "7df858fb29b229b971fe67d9a1a3cfd8a27c0ec8",
+      "serverId": "84e4e190-e623-4c37-9eda-58b1937c1b53",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "70eaf27a_cfa36ccb",
+        "filename": "xapp_onboarder/xapp_onboarder/api/onboard.py",
+        "patchSetId": 8
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 1000014
+      },
+      "writtenOn": "2020-03-13T09:58:39Z",
+      "side": 1,
+      "message": "same re log level",
+      "range": {
+        "startLine": 49,
+        "startChar": 12,
+        "endLine": 49,
+        "endChar": 17
+      },
+      "revId": "7df858fb29b229b971fe67d9a1a3cfd8a27c0ec8",
+      "serverId": "84e4e190-e623-4c37-9eda-58b1937c1b53",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "2b9d58f5_36aa97e9",
+        "filename": "xapp_onboarder/xapp_onboarder/api/onboard.py",
+        "patchSetId": 8
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 1000014
+      },
+      "writtenOn": "2020-03-13T09:58:39Z",
+      "side": 1,
+      "message": "Like this!!",
+      "range": {
+        "startLine": 61,
+        "startChar": 12,
+        "endLine": 61,
+        "endChar": 17
+      },
+      "revId": "7df858fb29b229b971fe67d9a1a3cfd8a27c0ec8",
+      "serverId": "84e4e190-e623-4c37-9eda-58b1937c1b53",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "c4974fe9_160f9423",
+        "filename": "xapp_onboarder/xapp_onboarder/api/onboard.py",
+        "patchSetId": 8
+      },
+      "lineNbr": 90,
+      "author": {
+        "id": 1000014
+      },
+      "writtenOn": "2020-03-13T09:58:39Z",
+      "side": 1,
+      "message": "see below about using \"foo\".format(arg)",
+      "range": {
+        "startLine": 90,
+        "startChar": 0,
+        "endLine": 90,
+        "endChar": 9
+      },
+      "revId": "7df858fb29b229b971fe67d9a1a3cfd8a27c0ec8",
+      "serverId": "84e4e190-e623-4c37-9eda-58b1937c1b53",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "80f1c56c_9167ef69",
+        "filename": "xapp_onboarder/xapp_onboarder/api/onboard.py",
+        "patchSetId": 8
+      },
+      "lineNbr": 110,
+      "author": {
+        "id": 1000014
+      },
+      "writtenOn": "2020-03-13T09:58:39Z",
+      "side": 1,
+      "message": "probably should use this new style instead of +\n\n    error_message \u003d \"Wrong response code: {}, {}\".format(response_content.status_code, response_content.content.decode(\"utf-8\"))",
+      "range": {
+        "startLine": 110,
+        "startChar": 0,
+        "endLine": 110,
+        "endChar": 4
+      },
+      "revId": "7df858fb29b229b971fe67d9a1a3cfd8a27c0ec8",
+      "serverId": "84e4e190-e623-4c37-9eda-58b1937c1b53",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "a959214f_d60ee349",
+        "filename": "xapp_onboarder/xapp_onboarder/cli",
+        "patchSetId": 8
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 1000014
+      },
+      "writtenOn": "2020-03-13T09:58:39Z",
+      "side": 1,
+      "message": "pls avoid extra whitespace like this",
+      "revId": "7df858fb29b229b971fe67d9a1a3cfd8a27c0ec8",
+      "serverId": "84e4e190-e623-4c37-9eda-58b1937c1b53",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "e6295ab4_2dd75834",
+        "filename": "xapp_onboarder/xapp_onboarder/helm_controller/artifacts_manager.py",
+        "patchSetId": 8
+      },
+      "lineNbr": 89,
+      "author": {
+        "id": 1000014
+      },
+      "writtenOn": "2020-03-13T09:58:39Z",
+      "side": 1,
+      "message": "pls avoid extra ws like this",
+      "revId": "7df858fb29b229b971fe67d9a1a3cfd8a27c0ec8",
+      "serverId": "84e4e190-e623-4c37-9eda-58b1937c1b53",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "19174917_8e17c666",
+        "filename": "xapp_onboarder/xapp_onboarder/helm_controller/xApp_builder.py",
+        "patchSetId": 8
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 1000014
+      },
+      "writtenOn": "2020-03-13T09:58:39Z",
+      "side": 1,
+      "message": "remove don\u0027t comment out unused code",
+      "range": {
+        "startLine": 71,
+        "startChar": 1,
+        "endLine": 72,
+        "endChar": 3
+      },
+      "revId": "7df858fb29b229b971fe67d9a1a3cfd8a27c0ec8",
+      "serverId": "84e4e190-e623-4c37-9eda-58b1937c1b53",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b8f86c7f_54231e97",
+        "filename": "xapp_onboarder/xapp_onboarder/helm_controller/xApp_builder.py",
+        "patchSetId": 8
+      },
+      "lineNbr": 77,
+      "author": {
+        "id": 1000014
+      },
+      "writtenOn": "2020-03-13T09:58:39Z",
+      "side": 1,
+      "message": "convert has no trailing \"e\"",
+      "range": {
+        "startLine": 77,
+        "startChar": 8,
+        "endLine": 77,
+        "endChar": 38
+      },
+      "revId": "7df858fb29b229b971fe67d9a1a3cfd8a27c0ec8",
+      "serverId": "84e4e190-e623-4c37-9eda-58b1937c1b53",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "63a0814d_fd48c218",
+        "filename": "xapp_onboarder/xapp_onboarder/helm_controller/xApp_builder.py",
+        "patchSetId": 8
+      },
+      "lineNbr": 133,
+      "author": {
+        "id": 1000014
+      },
+      "writtenOn": "2020-03-13T09:58:39Z",
+      "side": 1,
+      "message": "can you avoid hardcoding \"/templates\" repeatedly here, use a constant maybe?",
+      "range": {
+        "startLine": 133,
+        "startChar": 72,
+        "endLine": 133,
+        "endChar": 81
+      },
+      "revId": "7df858fb29b229b971fe67d9a1a3cfd8a27c0ec8",
+      "serverId": "84e4e190-e623-4c37-9eda-58b1937c1b53",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "5b635fee_0cedfcf5",
+        "filename": "xapp_onboarder/xapp_onboarder/repo_manager/repo_manager.py",
+        "patchSetId": 8
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 1000014
+      },
+      "writtenOn": "2020-03-13T09:58:39Z",
+      "side": 1,
+      "message": "suggest avoiding + and using \"\".format() instead on strings",
+      "range": {
+        "startLine": 79,
+        "startChar": 0,
+        "endLine": 79,
+        "endChar": 11
+      },
+      "revId": "7df858fb29b229b971fe67d9a1a3cfd8a27c0ec8",
+      "serverId": "84e4e190-e623-4c37-9eda-58b1937c1b53",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "ef62bf1c_2c0a086e",
+        "filename": "xapp_onboarder/xapp_onboarder/repo_manager/repo_manager.py",
+        "patchSetId": 8
+      },
+      "lineNbr": 112,
+      "author": {
+        "id": 1000014
+      },
+      "writtenOn": "2020-03-13T09:58:39Z",
+      "side": 1,
+      "message": "put this in a constant and reuse it in the methods",
+      "range": {
+        "startLine": 112,
+        "startChar": 0,
+        "endLine": 112,
+        "endChar": 5
+      },
+      "revId": "7df858fb29b229b971fe67d9a1a3cfd8a27c0ec8",
+      "serverId": "84e4e190-e623-4c37-9eda-58b1937c1b53",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "48b30eb2_e95d4910",
+        "filename": "xapp_onboarder/xapp_onboarder/repo_manager/repo_manager.py",
+        "patchSetId": 8
+      },
+      "lineNbr": 126,
+      "author": {
+        "id": 1000014
+      },
+      "writtenOn": "2020-03-13T09:58:39Z",
+      "side": 1,
+      "message": "is this \"get apps\" or \"get app charts\" ?",
+      "range": {
+        "startLine": 126,
+        "startChar": 8,
+        "endLine": 126,
+        "endChar": 21
+      },
+      "revId": "7df858fb29b229b971fe67d9a1a3cfd8a27c0ec8",
+      "serverId": "84e4e190-e623-4c37-9eda-58b1937c1b53",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "4ea0190a_0e1e8b8d",
+        "filename": "xapp_onboarder/xapp_onboarder/resources/xapp-std/Chart.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1000014
+      },
+      "writtenOn": "2020-03-13T09:58:39Z",
+      "side": 1,
+      "message": "instead of \"Standard\" do you maybe mean \"Example\" ?",
+      "range": {
+        "startLine": 18,
+        "startChar": 13,
+        "endLine": 18,
+        "endChar": 21
+      },
+      "revId": "7df858fb29b229b971fe67d9a1a3cfd8a27c0ec8",
+      "serverId": "84e4e190-e623-4c37-9eda-58b1937c1b53",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "96eda7fd_9e278425",
+        "filename": "xapp_onboarder/xapp_onboarder/resources/xapp-std/templates/appconfig.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1000014
+      },
+      "writtenOn": "2020-03-13T09:58:39Z",
+      "side": 1,
+      "message": "I don\u0027t see key \"ricxapp\" in values.yaml, am I blind or looking in the wrong place?",
+      "range": {
+        "startLine": 20,
+        "startChar": 20,
+        "endLine": 20,
+        "endChar": 27
+      },
+      "revId": "7df858fb29b229b971fe67d9a1a3cfd8a27c0ec8",
+      "serverId": "84e4e190-e623-4c37-9eda-58b1937c1b53",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "ccf2c127_18e3aae7",
+        "filename": "xapp_onboarder/xapp_onboarder/server/cli.py",
+        "patchSetId": 8
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1000014
+      },
+      "writtenOn": "2020-03-13T09:58:39Z",
+      "side": 1,
+      "message": "\"onboarder\" ?",
+      "range": {
+        "startLine": 32,
+        "startChar": 37,
+        "endLine": 32,
+        "endChar": 47
+      },
+      "revId": "7df858fb29b229b971fe67d9a1a3cfd8a27c0ec8",
+      "serverId": "84e4e190-e623-4c37-9eda-58b1937c1b53",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "d7ceece0_d9e4fa19",
+        "filename": "xapp_onboarder/xapp_onboarder/server/cli.py",
+        "patchSetId": 8
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1000014
+      },
+      "writtenOn": "2020-03-13T09:58:39Z",
+      "side": 1,
+      "message": "Remove \"If want\" so it reads:\n\n    \"To show all versions of an xApp ..\"",
+      "range": {
+        "startLine": 35,
+        "startChar": 48,
+        "endLine": 35,
+        "endChar": 55
+      },
+      "revId": "7df858fb29b229b971fe67d9a1a3cfd8a27c0ec8",
+      "serverId": "84e4e190-e623-4c37-9eda-58b1937c1b53",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b6d49f48_9c26f58d",
+        "filename": "xapp_onboarder/xapp_onboarder/server/cli.py",
+        "patchSetId": 8
+      },
+      "lineNbr": 118,
+      "author": {
+        "id": 1000014
+      },
+      "writtenOn": "2020-03-13T09:58:39Z",
+      "side": 1,
+      "message": "pls avoid extra trailing blank lines",
+      "revId": "7df858fb29b229b971fe67d9a1a3cfd8a27c0ec8",
+      "serverId": "84e4e190-e623-4c37-9eda-58b1937c1b53",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "ae058301_3ca34a9c",
+        "filename": "xapp_onboarder/xapp_onboarder/server/server.py",
+        "patchSetId": 8
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000014
+      },
+      "writtenOn": "2020-03-13T09:58:39Z",
+      "side": 1,
+      "message": "missing license header at top",
+      "revId": "7df858fb29b229b971fe67d9a1a3cfd8a27c0ec8",
+      "serverId": "84e4e190-e623-4c37-9eda-58b1937c1b53",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "9133d448_af7eab5f",
+        "filename": "xapp_onboarder/xapp_onboarder/server/server.py",
+        "patchSetId": 8
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1000014
+      },
+      "writtenOn": "2020-03-13T09:58:39Z",
+      "side": 1,
+      "message": "pls avoid extra blank lines",
+      "revId": "7df858fb29b229b971fe67d9a1a3cfd8a27c0ec8",
+      "serverId": "84e4e190-e623-4c37-9eda-58b1937c1b53",
+      "unresolved": true
+    }
+  ]
+}

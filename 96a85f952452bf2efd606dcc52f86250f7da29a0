@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c4035f18_e980288e",
+        "filename": "xapp_onboarder/xapp_onboarder/resources/xapp-std/templates/_helpers.tpl",
+        "patchSetId": 8
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1000014
+      },
+      "writtenOn": "2020-03-13T09:58:39Z",
+      "side": 0,
+      "message": "here you removed key ricxapp but in other places it\u0027s still present, I\u0027m not sure what\u0027s going on",
+      "range": {
+        "startLine": 21,
+        "startChar": 34,
+        "endLine": 21,
+        "endChar": 41
+      },
+      "revId": "96a85f952452bf2efd606dcc52f86250f7da29a0",
+      "serverId": "84e4e190-e623-4c37-9eda-58b1937c1b53",
+      "unresolved": true
+    }
+  ]
+}
