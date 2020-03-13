@@ -180,6 +180,30 @@
     },
     {
       "key": {
+        "uuid": "9821a9f2_31fc2478",
+        "filename": "xapp_onboarder/xapp_onboarder/api/endpoints/charts_ep.py",
+        "patchSetId": 8
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 1000046
+      },
+      "writtenOn": "2020-03-13T16:58:46Z",
+      "side": 1,
+      "message": "no, this is a list of charts with different versions.",
+      "parentUuid": "48e12c23_3826ce9b",
+      "range": {
+        "startLine": 48,
+        "startChar": 0,
+        "endLine": 48,
+        "endChar": 1
+      },
+      "revId": "7df858fb29b229b971fe67d9a1a3cfd8a27c0ec8",
+      "serverId": "84e4e190-e623-4c37-9eda-58b1937c1b53",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "3f5e3435_d5a2d914",
         "filename": "xapp_onboarder/xapp_onboarder/api/endpoints/charts_ep.py",
         "patchSetId": 8
@@ -295,6 +319,30 @@
     },
     {
       "key": {
+        "uuid": "60178e0a_c0e90b10",
+        "filename": "xapp_onboarder/xapp_onboarder/api/models/request_models.py",
+        "patchSetId": 8
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1000046
+      },
+      "writtenOn": "2020-03-13T16:58:46Z",
+      "side": 1,
+      "message": "Indeed. I got it from the semantic version website.",
+      "parentUuid": "6c907060_84241fd3",
+      "range": {
+        "startLine": 25,
+        "startChar": 46,
+        "endLine": 25,
+        "endChar": 228
+      },
+      "revId": "7df858fb29b229b971fe67d9a1a3cfd8a27c0ec8",
+      "serverId": "84e4e190-e623-4c37-9eda-58b1937c1b53",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "2114604b_cfc8260e",
         "filename": "xapp_onboarder/xapp_onboarder/api/onboard.py",
         "patchSetId": 8
@@ -318,6 +366,30 @@
     },
     {
       "key": {
+        "uuid": "a4beef51_82a7c56d",
+        "filename": "xapp_onboarder/xapp_onboarder/api/onboard.py",
+        "patchSetId": 8
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 1000046
+      },
+      "writtenOn": "2020-03-13T16:58:46Z",
+      "side": 1,
+      "message": "Not really. I don\u0027t want to show this as an error because this is an input mistake. The server is totally fine. If I filter error I want to see what\u0027s wrong with the server, not user\u0027s mistakes.",
+      "parentUuid": "2114604b_cfc8260e",
+      "range": {
+        "startLine": 42,
+        "startChar": 12,
+        "endLine": 42,
+        "endChar": 17
+      },
+      "revId": "7df858fb29b229b971fe67d9a1a3cfd8a27c0ec8",
+      "serverId": "84e4e190-e623-4c37-9eda-58b1937c1b53",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "70eaf27a_cfa36ccb",
         "filename": "xapp_onboarder/xapp_onboarder/api/onboard.py",
         "patchSetId": 8
@@ -329,6 +401,30 @@
       "writtenOn": "2020-03-13T09:58:39Z",
       "side": 1,
       "message": "same re log level",
+      "range": {
+        "startLine": 49,
+        "startChar": 12,
+        "endLine": 49,
+        "endChar": 17
+      },
+      "revId": "7df858fb29b229b971fe67d9a1a3cfd8a27c0ec8",
+      "serverId": "84e4e190-e623-4c37-9eda-58b1937c1b53",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "24deb854_f1c693b6",
+        "filename": "xapp_onboarder/xapp_onboarder/api/onboard.py",
+        "patchSetId": 8
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 1000046
+      },
+      "writtenOn": "2020-03-13T16:58:46Z",
+      "side": 1,
+      "message": "Not really. I don\u0027t want to show this as an error because this is an input mistake. The server is totally fine. If I filter error I want to see what\u0027s wrong with the server, not user\u0027s mistakes.",
+      "parentUuid": "70eaf27a_cfa36ccb",
       "range": {
         "startLine": 49,
         "startChar": 12,
@@ -559,6 +655,30 @@
     },
     {
       "key": {
+        "uuid": "4d11cc85_72355367",
+        "filename": "xapp_onboarder/xapp_onboarder/repo_manager/repo_manager.py",
+        "patchSetId": 8
+      },
+      "lineNbr": 112,
+      "author": {
+        "id": 1000046
+      },
+      "writtenOn": "2020-03-13T16:58:46Z",
+      "side": 1,
+      "message": "I may need to change the headers in the future for different request. May not be able to put it as a constant",
+      "parentUuid": "ef62bf1c_2c0a086e",
+      "range": {
+        "startLine": 112,
+        "startChar": 0,
+        "endLine": 112,
+        "endChar": 5
+      },
+      "revId": "7df858fb29b229b971fe67d9a1a3cfd8a27c0ec8",
+      "serverId": "84e4e190-e623-4c37-9eda-58b1937c1b53",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "48b30eb2_e95d4910",
         "filename": "xapp_onboarder/xapp_onboarder/repo_manager/repo_manager.py",
         "patchSetId": 8
@@ -570,6 +690,30 @@
       "writtenOn": "2020-03-13T09:58:39Z",
       "side": 1,
       "message": "is this \"get apps\" or \"get app charts\" ?",
+      "range": {
+        "startLine": 126,
+        "startChar": 8,
+        "endLine": 126,
+        "endChar": 21
+      },
+      "revId": "7df858fb29b229b971fe67d9a1a3cfd8a27c0ec8",
+      "serverId": "84e4e190-e623-4c37-9eda-58b1937c1b53",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "70ff6f9f_74fa07bc",
+        "filename": "xapp_onboarder/xapp_onboarder/repo_manager/repo_manager.py",
+        "patchSetId": 8
+      },
+      "lineNbr": 126,
+      "author": {
+        "id": 1000046
+      },
+      "writtenOn": "2020-03-13T16:58:46Z",
+      "side": 1,
+      "message": "This is literally getting a list of xapp names and versions.",
+      "parentUuid": "48b30eb2_e95d4910",
       "range": {
         "startLine": 126,
         "startChar": 8,
@@ -605,6 +749,30 @@
     },
     {
       "key": {
+        "uuid": "a45ff496_014fbe61",
+        "filename": "xapp_onboarder/xapp_onboarder/resources/xapp-std/Chart.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1000046
+      },
+      "writtenOn": "2020-03-13T16:58:46Z",
+      "side": 1,
+      "message": "This is actually the standard helm template for xApp. it meants that all the xApp should follow this structure. We need to enforce this actually.",
+      "parentUuid": "4ea0190a_0e1e8b8d",
+      "range": {
+        "startLine": 18,
+        "startChar": 13,
+        "endLine": 18,
+        "endChar": 21
+      },
+      "revId": "7df858fb29b229b971fe67d9a1a3cfd8a27c0ec8",
+      "serverId": "84e4e190-e623-4c37-9eda-58b1937c1b53",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "96eda7fd_9e278425",
         "filename": "xapp_onboarder/xapp_onboarder/resources/xapp-std/templates/appconfig.yaml",
         "patchSetId": 8
@@ -616,6 +784,30 @@
       "writtenOn": "2020-03-13T09:58:39Z",
       "side": 1,
       "message": "I don\u0027t see key \"ricxapp\" in values.yaml, am I blind or looking in the wrong place?",
+      "range": {
+        "startLine": 20,
+        "startChar": 20,
+        "endLine": 20,
+        "endChar": 27
+      },
+      "revId": "7df858fb29b229b971fe67d9a1a3cfd8a27c0ec8",
+      "serverId": "84e4e190-e623-4c37-9eda-58b1937c1b53",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "16bbfb2b_0b2fcdf5",
+        "filename": "xapp_onboarder/xapp_onboarder/resources/xapp-std/templates/appconfig.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1000046
+      },
+      "writtenOn": "2020-03-13T16:58:46Z",
+      "side": 1,
+      "message": "this is refering to my common-template definition. Not in the values.yaml.\nOnly those start with .Values are refering to the values.yaml key value pairs.",
+      "parentUuid": "96eda7fd_9e278425",
       "range": {
         "startLine": 20,
         "startChar": 20,
