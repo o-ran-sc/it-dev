@@ -41,4 +41,10 @@ setup(
     ],
     python_requires='>=3.6',
     install_requires=requirements,
+    entry_points={
+        'console_scripts': [
+            'xapp_onboarder = xapp_onboarder.server.server:main',
+            'cli = xapp_onboarder.server.cli:run'
+        ]
+    },
 )

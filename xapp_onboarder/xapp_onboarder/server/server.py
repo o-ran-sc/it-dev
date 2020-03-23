@@ -29,7 +29,6 @@ log = logging.getLogger(__name__)
 class server(object):
     def __init__(self):
         self.app = Flask(__name__)
-        self.app.config['SERVER_NAME'] = settings.FLASK_SERVER_NAME
         self.app.config['SWAGGER_UI_DOC_EXPANSION'] = settings.RESTPLUS_SWAGGER_UI_DOC_EXPANSION
         self.app.config['RESTPLUS_VALIDATE'] = settings.RESTPLUS_VALIDATE
         self.app.config['RESTPLUS_MASK_SWAGGER'] = settings.RESTPLUS_MASK_SWAGGER
@@ -46,9 +45,17 @@ class server(object):
 
     def run(self):
         log.info('>>>>> Starting development xapp_onboarder at http://{}/api/v1/ <<<<<'.format(self.app.config['SERVER_NAME']))
-        self.app.run(debug=settings.FLASK_DEBUG)
+        self.app.run(debug=settings.FLASK_DEBUG, host='0.0.0.0', port=settings.FLASK_PORT)
 
-if __name__ == "__main__":
+
+
+
+
+def main():
     logger_config = pkg_resources.resource_filename("xapp_onboarder", 'logging.conf')
     logging.config.fileConfig(logger_config)
     server().run()
+
+if __name__ == "__main__":
+    main()
+
