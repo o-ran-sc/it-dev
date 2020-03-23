@@ -67,10 +67,19 @@ class xApp():
             shutil.rmtree(self.chart_workspace_path)
         os.makedirs(self.chart_workspace_path)
         shutil.copytree(resource_filename( 'xapp_onboarder', 'resources/xapp-std'), self.chart_workspace_path + '/' + self.chart_name)
-        self.helm_client_path = settings.CHART_WORKSPACE_PATH + '/helm'
         self.setup_helm()
 
     def setup_helm(self):
+        self.helm_client_path = 'helm'
+        try:
+            process = subprocess.run([self.helm_client_path], stdout=PIPE, stderr=PIPE, check=True)
+
+        except Exception as err:
+            print(err)
+            self.download_helm()
+            self.helm_client_path = settings.CHART_WORKSPACE_PATH + '/helm'
+
+    def download_helm(self):
         if not os.path.isfile(settings.CHART_WORKSPACE_PATH + '/helm'):
             log.info("Helm client missing. Trying to download it.")
             helm_file_name = "helm-v{}-{}-amd64.tar.gz".format(settings.HELM_VERSION, platform.system().lower())

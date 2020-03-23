@@ -48,7 +48,12 @@ class server(object):
         log.info('>>>>> Starting development xapp_onboarder at http://{}/api/v1/ <<<<<'.format(self.app.config['SERVER_NAME']))
         self.app.run(debug=settings.FLASK_DEBUG)
 
-if __name__ == "__main__":
+
+def main():
     logger_config = pkg_resources.resource_filename("xapp_onboarder", 'logging.conf')
     logging.config.fileConfig(logger_config)
     server().run()
+
+if __name__ == "__main__":
+    main()
+

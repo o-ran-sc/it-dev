@@ -112,9 +112,10 @@ class cli():
         return json.dumps(message, indent=4, sort_keys=True)
 
 def run():
+    logger_config = pkg_resources.resource_filename("xapp_onboarder", 'logging.conf')
+    logging.config.fileConfig(logger_config)
     fire.Fire(cli(), name='xapp_onboarder')
 
 if __name__ == "__main__":
-    logger_config = pkg_resources.resource_filename("xapp_onboarder", 'logging.conf')
-    logging.config.fileConfig(logger_config)
+
     run()

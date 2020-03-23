@@ -18,7 +18,7 @@ FROM python:3.7-alpine
 
 ADD ./xapp_onboarder /opt/xapp_onboarder
 
-RUN cd /opt/xapp_onboarder && pip3 install . && ln -s $(pip show xapp_onboarder | grep Location | awk '{printf  $2 "/xapp_onboarder/xapp_onboarder"}') /usr/local/bin/xapp_onboarder && ln -s $(pip show xapp_onboarder | grep Location | awk '{printf  $2 "/xapp_onboarder/cli"}') /usr/local/bin/cli && rm -r /opt/xapp_onboarder
+RUN cd /opt/xapp_onboarder && pip3 install . && rm -r /opt/xapp_onboarder
 
 ARG HELM_VERSION="2.12.3"
 
