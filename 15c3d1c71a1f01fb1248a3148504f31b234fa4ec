@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8a01d2a9_7df1fb12",
+        "filename": "bldr-imgs/bldr-alpine3-go/Dockerfile",
+        "patchSetId": 1
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1000037
+      },
+      "writtenOn": "2020-03-24T12:20:36Z",
+      "side": 1,
+      "message": "I pushed a message init bug fix into 3.6.2 late yesterday. Depending on the style of the app\u0027s programmer (not checking for a nil pointer) it would bite them easily.    Can we bump this to the .2 patch level?",
+      "revId": "15c3d1c71a1f01fb1248a3148504f31b234fa4ec",
+      "serverId": "84e4e190-e623-4c37-9eda-58b1937c1b53",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "6c77f33f_d580b140",
+        "filename": "bldr-imgs/bldr-alpine3/Dockerfile",
+        "patchSetId": 1
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1000037
+      },
+      "writtenOn": "2020-03-24T12:20:36Z",
+      "side": 1,
+      "message": "You have clog in the RMR list.   Also, can you add librmr_si.so*?",
+      "revId": "15c3d1c71a1f01fb1248a3148504f31b234fa4ec",
+      "serverId": "84e4e190-e623-4c37-9eda-58b1937c1b53",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "61a11a39_30530d7d",
+        "filename": "bldr-imgs/bldr-alpine3/Dockerfile",
+        "patchSetId": 1
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1000037
+      },
+      "writtenOn": "2020-03-24T12:20:36Z",
+      "side": 1,
+      "message": "Can you add librmr_si.so.* examples?  These will be important",
+      "revId": "15c3d1c71a1f01fb1248a3148504f31b234fa4ec",
+      "serverId": "84e4e190-e623-4c37-9eda-58b1937c1b53",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "7200bc22_80ec2efb",
+        "filename": "bldr-imgs/bldr-alpine3/Dockerfile",
+        "patchSetId": 1
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 1000037
+      },
+      "writtenOn": "2020-03-24T12:20:36Z",
+      "side": 1,
+      "message": "The tag in the yaml says \"3-u16.04-nng\"   \n\nIs alpine a ubuntu based linux?  I thought alpine used different C runtime libs (build base vs install of gcc/g++).   Maybe I\u0027m just getting it mixed up with some other tiny image.",
+      "revId": "15c3d1c71a1f01fb1248a3148504f31b234fa4ec",
+      "serverId": "84e4e190-e623-4c37-9eda-58b1937c1b53",
+      "unresolved": true
+    }
+  ]
+}
