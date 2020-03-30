@@ -65,7 +65,7 @@ RUN cd /tmp \
 # install a well known working rmr including development header files,
 # which uses a submodule to install NNG at a known commit
 RUN apk update && apk add autoconf automake build-base cmake libtool ninja pkgconfig git sudo
-RUN git clone --branch 3.6.2 https://gerrit.oran-osc.org/r/ric-plt/lib/rmr \
+RUN git clone --branch 3.6.3 https://gerrit.oran-osc.org/r/ric-plt/lib/rmr \
     && cd rmr \
     && mkdir .build; cd .build \
     && echo "<<<installing rmr devel headers>>>" \
