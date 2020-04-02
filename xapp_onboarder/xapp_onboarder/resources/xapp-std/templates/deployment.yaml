@@ -54,17 +54,17 @@ spec:
           {{- if .ports }}
           ports:
             {{- if .ports.http }}
-            - name: http_{{ .name }}
+            - name: http-{{ .name }}
               containerPort: {{ .ports.http }}
               protocol: TCP
             {{- end }}
             {{- if .ports.rmr_data }}
-            - name: rmrdata_{{ .name }}
+            - name: rmrdata-{{ .name }}
               containerPort: {{ .ports.rmr_data }}
               protocol: TCP
             {{- end }}
             {{- if .ports.rmr_route }}
-            - name: rmrroute_{{ .name }}
+            - name: rmrroute-{{ .name }}
               containerPort: {{ .ports.rmr_route }}
               protocol: TCP
             {{- end }}

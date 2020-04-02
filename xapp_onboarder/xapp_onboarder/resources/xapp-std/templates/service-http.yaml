@@ -31,9 +31,9 @@ spec:
   {{- if .ports }}
     {{- if .ports.http }}
     - port: {{  .ports.http  }}
-      targetPort: http_{{ .name }}
+      targetPort: http-{{ .name }}
       protocol: TCP
-      name: http_{{ .name }}
+      name: http-{{ .name }}
     {{- end }}
   {{- end }}
   {{- end }}

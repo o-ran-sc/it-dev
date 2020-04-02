@@ -31,15 +31,15 @@ spec:
   {{- if .ports }}
     {{- if .ports.rmr_data }}
     - port: {{ .ports.rmr_data }}
-      targetPort: rmrdata_{{ .name }}
+      targetPort: rmrdata-{{ .name }}
       protocol: TCP
-      name: rmrdata_{{ .name }}
+      name: rmrdata-{{ .name }}
     {{- end }}
     {{- if .ports.rmr_route }}
     - port: {{ .ports.rmr_route }}
-      targetPort: rmrroute_{{ .name }}
+      targetPort: rmrroute-{{ .name }}
       protocol: TCP
-      name: rmrroute_{{ .name }}
+      name: rmrroute-{{ .name }}
     {{- end }}
   {{- end }}
   {{- end }}
