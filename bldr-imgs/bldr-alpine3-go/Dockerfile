@@ -19,15 +19,14 @@
 # golang 1.13.8
 # alpine 3.11
 # rmr 3.x
-# Installing this version of rmr also pulls in nng
 
 # install a well known working rmr
 FROM golang:1.13.8-alpine3.11
 RUN apk update && apk add autoconf automake build-base cmake libtool ninja pkgconfig git sudo
-RUN git clone --branch 3.6.3 https://gerrit.oran-osc.org/r/ric-plt/lib/rmr \
+RUN git clone --branch 3.6.6 https://gerrit.oran-osc.org/r/ric-plt/lib/rmr \
     && cd rmr \
     && mkdir .build; cd .build \
     && echo "<<<installing rmr devel headers>>>" \
     && cmake .. -DDEV_PKG=1; make install \
     && echo "<<< installing rmr .so>>>" \
-    && cmake .. -DPACK_EXTERNALS=1; make install
+    && cmake .. -DDEV_PKG=0; make install
