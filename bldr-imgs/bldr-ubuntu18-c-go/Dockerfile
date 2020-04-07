@@ -84,13 +84,6 @@ RUN wget -nv https://github.com/Kitware/CMake/releases/download/v${cv}/cmake-${c
     && ./cmake-${cv}-Linux-x86_64.sh --prefix=/usr/local --skip-license \
     && rm -f cmake*.sh
 
-# install a recent version of ninja-build, ubuntu repo version is old
-RUN wget -nv https://github.com/ninja-build/ninja/releases/download/v1.9.0/ninja-linux.zip \
-    && unzip ninja-linux.zip \
-    && chmod +x ninja \
-    && mv ninja /usr/local/bin \
-    && rm -f ninja*.zip
-
 # sonar-scanner is not available in ubuntu repo
 ARG sv="4.2.0.1873"
 RUN wget -nv https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-${sv}-linux.zip \
@@ -101,20 +94,6 @@ RUN wget -nv https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/son
 # golangci-lint is not available in ubuntu repo
 RUN wget -O- -nv https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh | sh -s -- -b $GOPATH/bin v1.23.6 \
     && rm -f install.sh
-
-# NNG repo is not frequently tagged so it's pinned to a commit hash.
-# This commit provides fix to the proxy-reconnect
-# bug that we identified:  https://github.com/nanomsg/nng/issues/970
-RUN git clone https://github.com/nanomsg/nng.git \
-    && cd nng \
-    && git checkout e618abf8f3db2a94269a79c8901a51148d48fcc2 \
-    && mkdir build \
-    && cd build \
-    && cmake -DBUILD_SHARED_LIBS=1 -G Ninja .. \
-    && ninja \
-    && ninja install \
-    && cd ../.. \
-    && rm -rf nng
 
 # install a recent version of boost, ubuntu repo version is old
 ARG bv="1_69_0"
