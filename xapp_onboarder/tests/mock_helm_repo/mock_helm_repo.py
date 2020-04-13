@@ -22,7 +22,7 @@ import json
 import os
 import tarfile
 from flask import Flask, jsonify, send_file
-from tests.constants import config_file, schema_file, helm_repo_index_response
+from tests.constants import config_file, controls_schema_file, helm_repo_index_response
 from xapp_onboarder.server import settings
 
 
@@ -80,7 +80,7 @@ def download_xapp_helm_package():
 def get_schema():
 
 
-    return schema_file, 200
+    return controls_schema_file, 200
 
 @app.route('/config-file.json', methods=['GET'])
 def get_config_file():

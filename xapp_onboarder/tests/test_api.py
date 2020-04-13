@@ -15,7 +15,7 @@
 ################################################################################
 
 from http import HTTPStatus
-from tests.constants import mock_json_body, mock_json_body_url,  helm_repo_index_response
+from tests.constants import mock_json_body, mock_json_body_url_without_controls, mock_json_body_url, mock_json_body_without_controls,  helm_repo_index_response
 
 
 def test_health(client):
@@ -52,9 +52,29 @@ def test_onboard_post(client):
     assert response.content_type == 'application/json', 'Content type error'
     assert response.json == {'status': 'Created'}, 'Onboard failed'
 
+def test_onboard_without_controls_post(client):
+    url = '/api/v1/onboard'
+    response = client.post(url, json=mock_json_body_without_controls)
+    assert response.status_code == HTTPStatus.BAD_REQUEST, 'Wrong status code'
+    assert response.content_type == 'application/json', 'Content type error'
+    assert response.json == {'error_message': "'__empty_control_section__' is a required property",
+                             'error_source': 'config-file.json',
+                             'status': 'Input payload validation failed'}, 'Onboard failed'
+
+
 def test_onboard_download_post(client):
     url = '/api/v1/onboard/download'
     response = client.post(url, json=mock_json_body_url)
     assert response.status_code == HTTPStatus.CREATED, 'Wrong status code'
     assert response.content_type == 'application/json', 'Content type error'
     assert response.json == {'status': 'Created'}, 'Onboard failed'
+
+
+def test_onboard_download_without_controls_post(client):
+    url = '/api/v1/onboard/download'
+    response = client.post(url, json=mock_json_body_url_without_controls)
+    assert response.status_code == HTTPStatus.BAD_REQUEST, 'Wrong status code'
+    assert response.content_type == 'application/json', 'Content type error'
+    assert response.json == {'error_message': "'__empty_control_section__' is a required property",
+                             'error_source': 'config-file.json',
+                             'status': 'Input payload validation failed'}, 'Onboard failed'

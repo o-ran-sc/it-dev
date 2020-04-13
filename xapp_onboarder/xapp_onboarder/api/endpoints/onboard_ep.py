@@ -48,9 +48,9 @@ class OnboardxApps(Resource):
         Onboard xApp with the xApp descriptor and its scehma included in the Json body
         """
         config_file = request.json.get('config-file.json')
-        schema_file = request.json.get('schema.json')
+        controls_schema_file = request.json.get('controls-schema.json')
 
-        return onboard(config_file, schema_file)
+        return onboard(config_file, controls_schema_file)
 
 
 @ns.route('/download')
@@ -65,7 +65,7 @@ class OnboardxAppsDownload(Resource):
         Onboard xApp with xApp descriptor and schema downloading URLs
         """
         config_file_url = request.json.get('config-file.json_url')
-        schema_url = request.json.get('schema.json_url')
+        controls_schema_url = request.json.get('controls-schema.json_url')
 
-        return download_config_and_schema_and_onboard(config_file_url, schema_url)
+        return download_config_and_schema_and_onboard(config_file_url, controls_schema_url)
 

@@ -44,31 +44,29 @@ spec:
           configMap:
             name: {{ include "ricxapp.configmapname" . }}-appconfig
       containers:
-{{- range .Values.containers }}
-        - name: {{ .name }}
-          image: "{{ .image.registry }}/{{ .image.name }}:{{ .image.tag }}"
-          {{- if .command }}
-          command: [{{ .command }}]
+{{- $containers := .Values.containers }}
+{{- $ports := .Values.messaging.ports }}
+{{- range $container := $containers }}
+  {{- $portlist := list }}
+  {{- range $port := $ports }}
+    {{- if eq $port.container $container.name }}
+        {{- $portlist = append $portlist $port }}
+    {{- end }}
+  {{- end }}
+        - name: {{ $container.name }}
+          image: "{{ $container.image.registry }}/{{ $container.image.name }}:{{ $container.image.tag }}"
+          {{- if $container.command }}
+          command: [{{ $container.command }}]
           {{- end}}
           imagePullPolicy: {{ $.Values.image_pull_policy }}
-          {{- if .ports }}
+  {{- if $portlist }}
           ports:
-            {{- if .ports.http }}
-            - name: http-{{ .name }}
-              containerPort: {{ .ports.http }}
+    {{- range $port := $portlist }}
+            - name: {{ $port.name }}
+              containerPort: {{ $port.port }}
               protocol: TCP
-            {{- end }}
-            {{- if .ports.rmr_data }}
-            - name: rmrdata-{{ .name }}
-              containerPort: {{ .ports.rmr_data }}
-              protocol: TCP
-            {{- end }}
-            {{- if .ports.rmr_route }}
-            - name: rmrroute-{{ .name }}
-              containerPort: {{ .ports.rmr_route }}
-              protocol: TCP
-            {{- end }}
-          {{- end }}
+    {{- end }}
+  {{- end }}
 {{- end }}
           volumeMounts:
             - name: config-volume
@@ -76,4 +74,6 @@ spec:
           envFrom:
             - configMapRef:
                 name: {{ include "ricxapp.configmapname" . }}-appenv
+            - configMapRef:
+                name: dbaas-appconfig
           restartPolicy: Always

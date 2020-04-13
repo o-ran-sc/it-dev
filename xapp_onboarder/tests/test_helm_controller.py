@@ -16,7 +16,7 @@
 import os
 import shutil
 from xapp_onboarder.helm_controller.xApp_builder import xApp, xAppError
-from tests.constants import config_file, schema_file
+from tests.constants import config_file, controls_schema_file
 from xapp_onboarder.server import settings
 
 
@@ -25,7 +25,7 @@ def test_packaging_xapp(client):
         if os.path.exists(chart_workspace_path):
                 shutil.rmtree(chart_workspace_path)
 
-        xapp = xApp(config_file, schema_file)
+        xapp = xApp(config_file, controls_schema_file)
         xapp.package_chart()
         assert os.path.isfile(chart_workspace_path + '/test_xapp-1.0.0.tgz'), 'xApp packaging error'
 
