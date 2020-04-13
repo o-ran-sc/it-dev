@@ -17,10 +17,6 @@ A helm chart repo is needed to store the xApp helm charts. You can use [chartmus
 Environment variables:
 * **FLASK_SERVER_NAME**: Address that the xapp_onboarder is listening on. Default http://0.0.0.0:8888
 * **CHART_REPO_URL**: helm chart repo URL. Default http://0.0.0.0:8080
-* **DBAAS_SERVICE_HOST**: DBAAS service host URL that will be injected into the xApp config
-* **DBAAS_MASTER_NAME**: DBAAS_HA sentinel master URL that will be injected into the xApp config
-* **DBAAS_SERVICE_SENTINEL_PORT**: DBAAS_HA sentinel port that will be injected into the xApp config
-* **DBAAS_SERVICE_PORT**: DBAAS service port that will be injected into the xApp config
 
 ## Configurations
 Environment variables:
@@ -32,25 +28,9 @@ Environment variables:
 
 ## Run the API server
 ```bash
-python3 -m xapp_onboarder.server.server
-```
-Or we recommend you can set up the symbolic link in your PATH
-```bash
-ln -s $(pip show xapp_onboarder | grep Location | awk '{printf  $2 "/xapp_onboarder/xapp_onboarder"}') /usr/local/bin/xapp_onboarder
-```
-Then you can run the server
-```bash
 xapp_onboarder
 ```
 ## Run the CLI tool
-```bash
-python3 -m xapp_onboarder.server.cli
-```
-Or we recommend you can set up the symbolic link in your PATH
-```bash
-ln -s $(pip show xapp_onboarder | grep Location | awk '{printf  $2 "/xapp_onboarder/cli"}') /usr/local/bin/cli
-```
-Then you can run the server
 ```bash
 cli
 ```
