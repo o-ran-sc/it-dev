@@ -38,8 +38,3 @@ MOCK_TEST_MODE = os.environ.get('MOCK_TEST_MODE') or False
 MOCK_TEST_HELM_REPO_TEMP_DIR = os.environ.get('MOCK_TEST_HELM_REPO_TEMP_DIR') or '/tmp/mock_helm_repo'
 
 
-# Environment variables that will be passed into xApp
-DBAAS_MASTER_NAME = os.environ.get('DBAAS_MASTER_NAME')
-DBAAS_SERVICE_HOST = os.environ.get('DBAAS_SERVICE_HOST')
-DBAAS_SERVICE_SENTINEL_PORT = os.environ.get('DBAAS_SERVICE_SENTINEL_PORT')
-DBAAS_SERVICE_PORT = os.environ.get('DBAAS_SERVICE_PORT')

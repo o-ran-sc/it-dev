@@ -14,13 +14,11 @@
 #   limitations under the License.                                             #
 ################################################################################
 
-schema_file = {
-    "definitions": {
-    },
+schema = {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "http://example.com/root.json",
+    "$id": "http://o-ran-sc.org/xapp_root.json",
     "type": "object",
-    "title": "The Root Schema",
+    "title": "The xApp Root Schema",
     "required": [
         "xapp_name",
         "version",
@@ -305,11 +303,12 @@ schema_file = {
                         "$id": "#/properties/messaging/ports/items",
                         "type": "object",
                         "title": "The Item of Port",
-                        "required": [
-                            "name",
-                            "container",
-                            "port"
-                        ],
+                        "required": ["name", "container", "port"],
+                        "dependencies": {
+                            "txMessages": ["rxMessages", "policies"],
+                            "rxMessages": ["txMessages", "policies"],
+                            "policies": ["rxMessages", "txMessages"]
+                        },
                         "properties": {
                             "name": {
                                 "$id": "#/properties/messaging/ports/items/name",
@@ -337,85 +336,66 @@ schema_file = {
                                 "examples": [
                                     8080
                                 ]
+                            },
+                            "description": {
+                                "$id": "#/properties/messaging/ports/items/description",
+                                "type": "string",
+                                "title": "The description for the port",
+                                "default": "port description",
+                                "examples": [
+                                    "port description"
+                                ]
+                            },
+                            "txMessages": {
+                                "$id": "#/properties/messaging/ports/items/txmessages",
+                                "type": "array",
+                                "title": "The txMessage Types",
+                                "items": {
+                                    "$id": "#/properties/messaging/ports/items//txmessages/item",
+                                    "type": "string",
+                                    "title": "The txMessage Types Item",
+                                    "default": "RIC_SUB",
+                                    "examples": [
+                                        "RIC_SUB"
+                                    ]
+                                }
+                            },
+                            "rxMessages": {
+                                "$id": "#/properties/messaging/ports/items/rxmessages",
+                                "type": "array",
+                                "title": "The rxMessage Types",
+                                "items": {
+                                    "$id": "#/properties/messaging/ports/items/rxmessages/item",
+                                    "type": "string",
+                                    "title": "The rxMessage Types Item",
+                                    "default": "RIC_SUB",
+                                    "examples": [
+                                        "RIC_SUB"
+                                    ]
+                                }
+                            },
+                            "policies": {
+                                "$id": "#/properties/messaging/ports/items/policies",
+                                "type": "array",
+                                "title": "The Policies Types",
+                                "items": {
+                                    "$id": "#/properties/messaging/ports/items/policies/item",
+                                    "type": "integer",
+                                    "title": "The Policy Types Item",
+                                    "default": 1,
+                                    "examples": [
+                                        1
+                                    ]
+                                }
                             }
                         }
-                    }
-                },
-                "maxSize": {
-                    "$id": "#/properties/messaging/maxsize",
-                    "type": "integer",
-                    "title": "The Maximum RMR Buffer Size",
-                    "default": 2072,
-                    "examples": [
-                        2072
-                    ]
-                },
-                "numWorkers": {
-                    "$id": "#/properties/messaging/numworkers",
-                    "type": "integer",
-                    "title": "The Number of RMR workers",
-                    "default": 1,
-                    "examples": [
-                        1
-                    ]
-                },
-                "txMessages": {
-                    "$id": "#/properties/messaging/txmessages",
-                    "type": "array",
-                    "title": "The txMessage Types",
-                    "items": {
-                        "$id": "#/properties/messaging/txmessages/item",
-                        "type": "string",
-                        "title": "The txMessage Types Item",
-                        "default": "RIC_SUB",
-                        "examples": [
-                            "RIC_SUB"
-                        ]
-                    }
-                },
-                "rxMessages": {
-                    "$id": "#/properties/messaging/rxmessages",
-                    "type": "array",
-                    "title": "The rxMessage Types",
-                    "items": {
-                        "$id": "#/properties/messaging/rxmessages/item",
-                        "type": "string",
-                        "title": "The rxMessage Types Item",
-                        "default": "RIC_SUB",
-                        "examples": [
-                            "RIC_SUB"
-                        ]
-                    }
-                },
-                "policies": {
-                    "$id": "#/properties/messaging/policies",
-                    "type": "array",
-                    "title": "The Policies Types",
-                    "items": {
-                        "$id": "#/properties/messaging/policies/item",
-                        "type": "integer",
-                        "title": "The Policy Types Item",
-                        "default": 1,
-                        "examples": [
-                            1
-                        ]
                     }
                 }
             },
             "required": [
-                "ports",
-                "maxSize",
-                "numWorkers",
-                "txMessages",
-                "rxMessages",
-                "policies"
+                "ports"
             ]
 
-        },
-        "controls": {
-            "type": "object",
-            "$id": "#/properties/controls",
-            "title": "The Controls Schema"
         },
         "metrics": {
             "type": "array",
@@ -460,134 +440,12 @@ schema_file = {
                     }
                 }
             }
+        },
+        "controls": {
+            "required": [
+                "__empty_control_section__"
+            ]
         }
+
     }
 }
-
-config_file = {
-    "xapp_name": "test_xapp",
-    "version": "1.0.0",
-    "containers": [
-        {
-            "name": "mcxapp",
-            "image": {
-                "registry": "nexus3.o-ran-sc.org:10002",
-                "name": "o-ran-sc/ric-app-mc",
-                "tag": "1.0.2"
-            },
-            "command": "/playpen/bin/container_start.sh"
-        }
-    ],
-    "livenessProbe": {
-        "exec": {
-            "command": ["/usr/local/bin/health_ck"]
-        },
-        "initialDelaySeconds": 5,
-        "periodSeconds": 15
-    },
-    "readinessProbe": {
-        "httpGet": {
-            "path": "ric/v1/health/alive",
-            "port": 8080
-        },
-        "initialDelaySeconds": 5,
-        "periodSeconds": 15
-    },
-    "messaging": {
-        "ports": [
-            {
-                "name": "http",
-                "container": "mcxapp",
-                "port": 8080,
-                "description": "http service"
-            },
-            {
-                "name": "rmr_data",
-                "container": "mcxapp",
-                "port": 4560,
-                "description": "rmr data port for mcxapp"
-            },
-            {
-                "name": "rmr_route",
-                "container": "mcxapp",
-                "port": 4561,
-                "description": "rmr route port for mcxapp"
-            }
-        ],
-        "maxSize": 2072,
-        "numWorkers": 1,
-        "txMessages": [
-            "RIC_SUB_REQ",
-            "RIC_SUB_DEL_REQ"
-        ],
-        "rxMessages": [
-            "RIC_SUB_RESP",
-            "RIC_SUB_FAILURE",
-            "RIC_SUB_DEL_RESP",
-            "RIC_INDICATION"
-        ],
-        "policies": [1, 2]
-    },
-    "controls": {
-        "active": "true",
-        "interfaceId": {
-            "globalENBId": {
-                "plmnId": 123456,
-                "eNBId": 5678
-            }
-        },
-        "ves_collector_address": "xapp-sandbox2.research.att.com:8888",
-        "measurement_interval": 10000,
-        "simulator_mode": "true",
-        "debug_mode": "true",
-        "local": {
-            "host": ":8080"
-        },
-        "logger": {
-            "level": 3
-        }
-    },
-    "metrics": [
-        {
-            "objectName": "UEEventStreamingCounters",
-            "objectInstance": "SgNBAdditionRequest",
-            "name": "SgNBAdditionRequest",
-            "type": "counter",
-            "description": "The total number of SG addition request events processed"
-        },
-        {
-            "objectName": "UEEventStreamingCounters",
-            "objectInstance": "SgNBAdditionRequestAcknowledge",
-            "name": "SgNBAdditionRequestAcknowledge",
-            "type": "counter",
-            "description": "The total number of SG addition request acknowledge events processed"
-        }
-    ]
-}
-
-mock_json_body_url = {
-    'config-file.json_url': 'http://0.0.0.0:8080/config-file.json',
-    'schema.json_url': 'http://0.0.0.0:8080/schema.json'
-}
-
-mock_json_body = {
-    "config-file.json": config_file,
-    "schema.json": schema_file
-}
-
-helm_repo_index_response = {'apiVersion': 'v1',
-                            'entries': {
-                                'test_xapp': [{
-                                    'apiVersion': 'v1',
-                                    'appVersion': '1.0',
-                                    'created': '2020-03-12T19:10:17.178396719Z',
-                                    'description': 'test xApp Helm Chart',
-                                    'digest': 'd77dfb3f008e5174e90d79bfe982ef85b5dc5930141f6a1bd9995b2fa35',
-                                    'name': 'test_xapp',
-                                    'urls': ['charts/test-1.0.0.tgz'],
-                                    'version': '1.0.0'
-                                }]
-                            },
-                            'generated': '2020-03-16T16:54:44Z',
-                            'serverInfo': {}
-                            }

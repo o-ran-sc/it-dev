@@ -159,44 +159,9 @@ class xApp():
                     outputfile.write(indented_probe_definition_yaml)
 
 
-
     def append_config_to_values_yaml(self):
         with open(self.chart_workspace_path + '/' + self.chart_name + '/values.yaml', 'a') as outputfile:
             yaml.dump(self.config_file, outputfile, default_flow_style=False)
-
-
-    def append_env_to_config_map(self):
-        with open(self.chart_workspace_path + '/' + self.chart_name + '/templates/appenv.yaml', 'a') as outputfile:
-            append = {}
-            if settings.DBAAS_MASTER_NAME:
-                master_name = settings.DBAAS_MASTER_NAME
-                service_host = settings.DBAAS_SERVICE_HOST
-                sentinel_port = settings.DBAAS_SERVICE_SENTINEL_PORT
-                if not service_host:
-                    raise xAppError(
-                        "Internal failure. Cannot find environment variable 'DBAAS_SERVICE_HOST'. (Caused by: Misconfiguration of temp deployment)", 500)
-                if not sentinel_port:
-                    raise xAppError(
-                        "Internal failure. Cannot find environment variable 'DBAAS_SERVICE_SENTINEL_PORT'. (Caused by: Misconfiguration of temp deployment)", 500)
-
-                append['DBAAS_MASTER_NAME'] = master_name
-                append['DBAAS_SERVICE_HOST'] = service_host
-                append['DBAAS_SERVICE_SENTINEL_PORT'] = sentinel_port
-            elif settings.DBAAS_SERVICE_HOST:
-                service_host = settings.DBAAS_SERVICE_HOST
-                service_port = settings.DBAAS_SERVICE_PORT
-                if not service_port:
-                    raise xAppError(
-                        "Internal failure. Cannot find environment variable 'DBAAS_SERVICE_PORT'. (Caused by: Misconfiguration of temp deployment)", 500)
-                append['DBAAS_SERVICE_HOST'] = service_host
-                append['DBAAS_SERVICE_PORT'] = service_port
-            else:
-                raise xAppError(
-                    "Internal failure. Cannot find environment variable 'DBAAS_SERVICE_HOST' or 'DBAAS_MASTER_NAME'. (Caused by: Misconfiguration of temp deployment)",
-                    500)
-            output_yaml = yaml.dump(append)
-            indented_output_yaml = indent(output_yaml, 2)
-            outputfile.write(indented_output_yaml)
 
 
     def change_chart_name_version(self):
@@ -225,7 +190,6 @@ class xApp():
     def package_chart(self):
         self.append_config_to_config_map()
         self.append_config_to_values_yaml()
-        self.append_env_to_config_map()
         self.add_probes_to_deployment()
         self.change_chart_name_version()
         self.helm_lint()
