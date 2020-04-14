@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "e9cf592a_21206743",
+        "filename": "xapp_onboarder/tests/constants.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1000046
+      },
+      "writtenOn": "2020-04-14T23:54:51Z",
+      "side": 1,
+      "message": "The general idea is that Nokia does not want to be involved in any non-platform integration works. Therefore, it is my understanding that among all the repos belongs to the integration team (it/dep, it/dev, and ric-plt/ric-dep), only codes in the ric-plt/ric-dep repo will have a joint copyright header.",
+      "parentUuid": "5c83e595_fee41fa3",
+      "revId": "a689a7720be935009c3ab92aea0dd56217b1a2a3",
+      "serverId": "84e4e190-e623-4c37-9eda-58b1937c1b53",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "7b5c231f_45580a84",
         "filename": "xapp_onboarder/tests/constants.py",
         "patchSetId": 1
@@ -30,6 +48,24 @@
       "writtenOn": "2020-04-14T12:29:45Z",
       "side": 1,
       "message": "Most xAPPs are using 4560 as their de facto standard listen port. Would it make more sense to use that as teh default and example?   To me, 80 implies HTTP.",
+      "revId": "a689a7720be935009c3ab92aea0dd56217b1a2a3",
+      "serverId": "84e4e190-e623-4c37-9eda-58b1937c1b53",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "e5565ede_05b32c03",
+        "filename": "xapp_onboarder/tests/constants.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 336,
+      "author": {
+        "id": 1000046
+      },
+      "writtenOn": "2020-04-14T23:54:51Z",
+      "side": 1,
+      "message": "That is an example for http. The port section is not only listing RMR ports but also http ones.",
+      "parentUuid": "7b5c231f_45580a84",
       "revId": "a689a7720be935009c3ab92aea0dd56217b1a2a3",
       "serverId": "84e4e190-e623-4c37-9eda-58b1937c1b53",
       "unresolved": true
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "ccac4039_aa458ec2",
+        "filename": "xapp_onboarder/tests/constants.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 344,
+      "author": {
+        "id": 1000046
+      },
+      "writtenOn": "2020-04-14T23:54:51Z",
+      "side": 1,
+      "message": "good catch. btw, is it true that the application will have to pick this up and send it to RMR library? Does it mean that all xApps will have to change accordingly?",
+      "parentUuid": "f0cce48e_c4fa3f5d",
+      "revId": "a689a7720be935009c3ab92aea0dd56217b1a2a3",
+      "serverId": "84e4e190-e623-4c37-9eda-58b1937c1b53",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "b56df849_9e92bf28",
         "filename": "xapp_onboarder/tests/constants.py",
         "patchSetId": 1
@@ -67,6 +121,24 @@
       "revId": "a689a7720be935009c3ab92aea0dd56217b1a2a3",
       "serverId": "84e4e190-e623-4c37-9eda-58b1937c1b53",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "d4322bcc_572cf8da",
+        "filename": "xapp_onboarder/tests/constants.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 347,
+      "author": {
+        "id": 1000046
+      },
+      "writtenOn": "2020-04-14T23:54:51Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "b56df849_9e92bf28",
+      "revId": "a689a7720be935009c3ab92aea0dd56217b1a2a3",
+      "serverId": "84e4e190-e623-4c37-9eda-58b1937c1b53",
+      "unresolved": false
     },
     {
       "key": {
