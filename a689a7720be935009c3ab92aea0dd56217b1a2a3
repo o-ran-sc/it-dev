@@ -1,0 +1,89 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5c83e595_fee41fa3",
+        "filename": "xapp_onboarder/tests/constants.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1000037
+      },
+      "writtenOn": "2020-04-14T12:29:45Z",
+      "side": 1,
+      "message": "Is this not considered joint work with Nokia?",
+      "revId": "a689a7720be935009c3ab92aea0dd56217b1a2a3",
+      "serverId": "84e4e190-e623-4c37-9eda-58b1937c1b53",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "7b5c231f_45580a84",
+        "filename": "xapp_onboarder/tests/constants.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 336,
+      "author": {
+        "id": 1000037
+      },
+      "writtenOn": "2020-04-14T12:29:45Z",
+      "side": 1,
+      "message": "Most xAPPs are using 4560 as their de facto standard listen port. Would it make more sense to use that as teh default and example?   To me, 80 implies HTTP.",
+      "revId": "a689a7720be935009c3ab92aea0dd56217b1a2a3",
+      "serverId": "84e4e190-e623-4c37-9eda-58b1937c1b53",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "f0cce48e_c4fa3f5d",
+        "filename": "xapp_onboarder/tests/constants.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 344,
+      "author": {
+        "id": 1000037
+      },
+      "writtenOn": "2020-04-14T12:29:45Z",
+      "side": 1,
+      "message": "RMR no longer has a max receive size, so this is a bit misleading or could cause confusion.   Sorry I didn\u0027t notice this in your earlier samples.  There still is a size value that controls the default buffer allocated when anticipating an inbound message, but with 3.6.6 that buffer size is not fixed if a larger message arrives. Outbound message have no size limit.\n\nI\u0027ve been referring to this size as the \"normal\" or \"usual\" message size to imply that the majority of the arriving messages should fit and not require extra cycles to expand the buffer.  \n\nCan this be changed to something like  defBufSize or normBufSize?",
+      "revId": "a689a7720be935009c3ab92aea0dd56217b1a2a3",
+      "serverId": "84e4e190-e623-4c37-9eda-58b1937c1b53",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b56df849_9e92bf28",
+        "filename": "xapp_onboarder/tests/constants.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 347,
+      "author": {
+        "id": 1000037
+      },
+      "writtenOn": "2020-04-14T12:29:45Z",
+      "side": 1,
+      "message": "Can this be changed to remove the \"max\"?  See previous comment.",
+      "revId": "a689a7720be935009c3ab92aea0dd56217b1a2a3",
+      "serverId": "84e4e190-e623-4c37-9eda-58b1937c1b53",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "31b0b84f_b7b6f8ff",
+        "filename": "xapp_onboarder/tests/constants.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 376,
+      "author": {
+        "id": 1000037
+      },
+      "writtenOn": "2020-04-14T12:29:45Z",
+      "side": 1,
+      "message": "I think there has been some question about how message types are associated with the port(s) to which they are expected to be delivered.  I think a meeting is scheduled today to discuss, so I\u0027m leaving this comment only as a marker.",
+      "revId": "a689a7720be935009c3ab92aea0dd56217b1a2a3",
+      "serverId": "84e4e190-e623-4c37-9eda-58b1937c1b53",
+      "unresolved": true
+    }
+  ]
+}
