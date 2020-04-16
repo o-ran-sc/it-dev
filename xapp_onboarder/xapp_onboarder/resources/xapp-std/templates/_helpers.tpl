@@ -45,14 +45,9 @@ Create chart name and version as used by the chart label.
 
 
 
-{{- define "ricxapp.servicename.rmr" -}}
+{{- define "ricxapp.servicename" -}}
   {{- $name := ( include "ricxapp.fullname" . ) -}}
-  {{- printf "service-%s-rmr" $name | trunc 63 | trimSuffix "-" -}}
-{{- end -}}
-
-{{- define "ricxapp.servicename.http" -}}
-  {{- $name := ( include "ricxapp.fullname" . ) -}}
-  {{- printf "service-%s-http" $name | trunc 63 | trimSuffix "-" -}}
+  {{- printf "service-%s" $name | trunc 63 | trimSuffix "-" -}}
 {{- end -}}
 
 {{- define "ricxapp.configmapname" -}}

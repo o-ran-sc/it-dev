@@ -17,7 +17,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: {{ include "ricxapp.servicename.rmr" . }}
+  name: {{ include "ricxapp.servicename" . }}
   namespace: {{ include "ricxapp.namespace" . }}
   labels:
     app: {{ include "ricxapp.namespace" . }}-{{ include "ricxapp.name" . }}
@@ -27,21 +27,11 @@ metadata:
 spec:
   type: ClusterIP
   ports:
-  {{- range .Values.containers }}
-  {{- if .ports }}
-    {{- if .ports.rmr_data }}
-    - port: {{ .ports.rmr_data }}
-      targetPort: rmrdata-{{ .name }}
+  {{- range .Values.messaging.ports  }}
+    - port: {{ .port }}
+      targetPort: {{ .name }}
       protocol: TCP
-      name: rmrdata-{{ .name }}
-    {{- end }}
-    {{- if .ports.rmr_route }}
-    - port: {{ .ports.rmr_route }}
-      targetPort: rmrroute-{{ .name }}
-      protocol: TCP
-      name: rmrroute-{{ .name }}
-    {{- end }}
-  {{- end }}
+      name: {{ .name }}
   {{- end }}
   selector:
     app: {{ include "ricxapp.namespace" . }}-{{ include "ricxapp.name" . }}
