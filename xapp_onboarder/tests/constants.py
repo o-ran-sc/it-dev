@@ -137,6 +137,7 @@ mock_json_body = {
 mock_json_body_without_controls = {
     "config-file.json": config_file
 }
+
 helm_repo_index_response = {'apiVersion': 'v1',
                             'entries': {
                                 'test_xapp': [{
