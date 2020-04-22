@@ -24,7 +24,6 @@
 # COPY --from=nexus3.o-ran-sc.org:10002/bldr-alpine3-rmr:TAG /usr/local/lib64/librmr_si.so /usr/local/lib64/librmr_si.so
 #
 # /usr/local/bin:
-#     health_ck
 #     rmr_probe
 #
 # /usr/local/include/rmr:
@@ -34,18 +33,14 @@
 #     rmr_symtab.h
 #
 # /usr/local/lib64:
-#     librmr_nng.a
-#     librmr_nng.so
-#     librmr_nng.so.3        (subject to version change)
-#     librmr_nng.so.3.8.2    (subject to version change)
 #     librmr_si.a
 #     librmr_si.so
-#     librmr_si.so.3         (subject to version change)
-#     librmr_si.so.3.8.2     (subject to version change)
+#     librmr_si.so.4         (subject to version change)
+#     librmr_si.so.4.0.0     (subject to version change)
 
 FROM alpine:3.11 as bldr
 RUN apk update && apk add autoconf automake build-base cmake libtool pkgconfig git sudo
-RUN git clone --branch 3.8.2 https://gerrit.oran-osc.org/r/ric-plt/lib/rmr \
+RUN git clone --branch 4.0.0 https://gerrit.oran-osc.org/r/ric-plt/lib/rmr \
     && cd rmr \
     && mkdir .build; cd .build \
     && echo "<<<installing rmr devel headers>>>" \
@@ -53,7 +48,8 @@ RUN git clone --branch 3.8.2 https://gerrit.oran-osc.org/r/ric-plt/lib/rmr \
     && echo "<<< installing rmr .so>>>" \
     && cmake .. -DDEV_PKG=0; make install
 
-FROM scratch
-COPY --from=bldr /usr/local/bin /usr/local/bin
+#FROM scratch
+FROM alpine:3.11
+COPY --from=bldr /usr/local/bin/rmr* /usr/local/bin/
 COPY --from=bldr /usr/local/include/rmr /usr/local/include/rmr
-COPY --from=bldr /usr/local/lib64 /usr/local/lib64
+COPY --from=bldr /usr/local/lib64/librmr* /usr/local/lib64/
