@@ -20,7 +20,6 @@
 # golang v 1.13.4
 # python 3.7
 # mdc log libs (libmdclog.so, libmdbclog.so.X.X.X; see below for pinned version)
-# rmr libs (librmr_si.so, librmr_si.so.X.X.X; see below for pinned version)
 #
 # Some packages (e.g., mdclog) install to /usr/local/lib, others (e.g., rmr) install to /usr/local/lib64
 # Alpine by default searches /usr/local/lib but not /usr/local/lib64
@@ -58,14 +57,4 @@ RUN cd /tmp \
    && ./configure \
    && make \
    && make install
-
-# install a well known working rmr including development header files,
-# which uses a submodule to install NNG at a known commit
-RUN apk update && apk add autoconf automake build-base cmake libtool ninja pkgconfig git sudo
-RUN git clone --branch 3.7.1 https://gerrit.oran-osc.org/r/ric-plt/lib/rmr \
-    && cd rmr \
-    && mkdir .build; cd .build \
-    && echo "<<<installing rmr devel headers>>>" \
-    && cmake .. -DDEV_PKG=1; make install \
-    && echo "<<< installing rmr .so>>>" \
-    && cmake .. -DDEV_PKG=0; make install
+   
