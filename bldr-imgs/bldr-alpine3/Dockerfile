@@ -14,19 +14,11 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# This is an all-things-to-all-ORAN-people build image with:
-# alpine v 3.11
+# This is an all-things-to-all-ORAN-people Alpine 3.11 build image with:
 # gcc/g++ v 8
-# golang v 1.13.4
+# golang v 1.13.x
 # python 3.7
-# mdc log libs (libmdclog.so, libmdbclog.so.X.X.X; see below for pinned version)
-#
-# Some packages (e.g., mdclog) install to /usr/local/lib, others (e.g., rmr) install to /usr/local/lib64
-# Alpine by default searches /usr/local/lib but not /usr/local/lib64
-#
-# How to get library files from this Docker base image:
-# COPY --from=nexus3.o-ran-sc.org:10004/bldr-alpine3:TAG /usr/local/lib/libmdclog.so.X.X.X    /usr/local/lib
-# COPY --from=nexus3.o-ran-sc.org:10004/bldr-alpine3:TAG /usr/local/lib64/librmr_si.so.X.X.X  /usr/local/lib
+# ORAN libraries are not provided here to reduce version churn
 
 FROM python:3.7-alpine
 RUN apk update && apk add \
@@ -48,13 +40,3 @@ RUN cd /tmp \
     && git clone --branch v2015.09.25 git://git.sv.gnu.org/autoconf-archive.git \
     && cp /tmp/autoconf-archive/m4/* /usr/share/aclocal \
     && rm -rf /tmp/autoconf-archive
-
-# MCDLOG, version is pinned
-RUN cd /tmp \
-   && git clone --branch v0.0.4 https://gerrit.o-ran-sc.org/r/com/log \
-   && cd log \
-   && ./autogen.sh \
-   && ./configure \
-   && make \
-   && make install
-   
