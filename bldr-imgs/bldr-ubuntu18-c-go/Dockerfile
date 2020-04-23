@@ -19,14 +19,17 @@
 FROM nexus3.o-ran-sc.org:10001/ubuntu:18.04
 
 RUN apt-get update && apt-get install -y \
+    alien \
     autoconf \
     autoconf-archive \
     automake \
     autotools-dev \
     build-essential \
+    cmake \
     g++  \
     gcc \
     git \
+    ksh \
     libbz2-dev \
     libicu-dev \
     libsctp-dev \
