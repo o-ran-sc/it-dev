@@ -36,11 +36,11 @@
 #     librmr_si.a
 #     librmr_si.so
 #     librmr_si.so.4         (subject to version change)
-#     librmr_si.so.4.0.0     (subject to version change)
+#     librmr_si.so.4.0.2     (subject to version change)
 
 FROM alpine:3.11 as bldr
 RUN apk update && apk add autoconf automake build-base cmake libtool pkgconfig git sudo
-RUN git clone --branch 4.0.0 https://gerrit.oran-osc.org/r/ric-plt/lib/rmr \
+RUN git clone --branch 4.0.2 https://gerrit.oran-osc.org/r/ric-plt/lib/rmr \
     && cd rmr \
     && mkdir .build; cd .build \
     && echo "<<<installing rmr devel headers>>>" \
