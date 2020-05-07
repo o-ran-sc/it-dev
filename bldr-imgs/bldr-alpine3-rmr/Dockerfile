@@ -21,7 +21,7 @@
 # See list of available files below.  Use the following command to copy a file
 # in a Docker build, after replacing "TAG" with the desired version string:
 #
-# COPY --from=nexus3.o-ran-sc.org:10002/bldr-alpine3-rmr:TAG /usr/local/lib64/librmr_si.so /usr/local/lib64/librmr_si.so
+# COPY --from=nexus3.o-ran-sc.org:10002/o-ran-sc/bldr-alpine3-rmr:TAG /usr/local/lib64/librmr* /usr/local/lib64/
 #
 # /usr/local/bin:
 #     rmr_probe
@@ -40,7 +40,7 @@
 
 FROM alpine:3.11 as bldr
 RUN apk update && apk add autoconf automake build-base cmake libtool pkgconfig git sudo
-RUN git clone --branch 4.0.2 https://gerrit.oran-osc.org/r/ric-plt/lib/rmr \
+RUN git clone --branch 4.0.5 https://gerrit.oran-osc.org/r/ric-plt/lib/rmr \
     && cd rmr \
     && mkdir .build; cd .build \
     && echo "<<<installing rmr devel headers>>>" \
