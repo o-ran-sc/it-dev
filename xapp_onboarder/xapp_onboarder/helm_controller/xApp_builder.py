@@ -145,6 +145,17 @@ class xApp():
             outputfile.write(indented_schema_text)
 
 
+# This is a work around for the bronze release to be backward compatible to the previous xapp standard helm template
+    def write_config_and_schema(self):
+        os.makedirs(self.chart_workspace_path + '/' + self.chart_name + '/descriptors')
+        os.makedirs(self.chart_workspace_path + '/' + self.chart_name + '/config')
+        with open(self.chart_workspace_path + '/' + self.chart_name + '/descriptors/schema.json', 'w') as outfile:
+            json.dump(self.schema_file, outfile)
+        with open(self.chart_workspace_path + '/' + self.chart_name + '/config/config-file.json', 'w') as outfile:
+            json.dump(self.config_file, outfile)
+
+
+
     def add_probes_to_deployment(self):
         with open(self.chart_workspace_path + '/' + self.chart_name + '/templates/deployment.yaml', 'a') as outputfile:
 
@@ -188,6 +199,7 @@ class xApp():
                 err.stderr.decode("utf-8") +  "\n" + err.stdout.decode("utf-8") + ")", 400)
 
     def package_chart(self):
+        self.write_config_and_schema()
         self.append_config_to_config_map()
         self.append_config_to_values_yaml()
         self.add_probes_to_deployment()
