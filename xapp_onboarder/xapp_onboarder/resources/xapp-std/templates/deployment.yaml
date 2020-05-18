@@ -56,7 +56,24 @@ spec:
         - name: {{ $container.name }}
           image: "{{ $container.image.registry }}/{{ $container.image.name }}:{{ $container.image.tag }}"
           {{- if $container.command }}
-          command: [{{ $container.command }}]
+          command: [
+          {{- range $command := $container.command -}}
+          {{- $command | quote -}}
+          {{- if ne $command (last $container.command) }}
+          {{- print ", " -}}
+          {{- end -}}
+          {{- end -}}
+          {{- print "]" -}}
+          {{- end}}
+          {{- if $container.args }}
+          args: [
+          {{- range $arg := $container.args -}}
+          {{- $arg | quote -}}
+          {{- if ne $arg (last $container.args) }}
+          {{- print ", " -}}
+          {{- end -}}
+          {{- end -}}
+          {{- print "]" -}}
           {{- end}}
           imagePullPolicy: {{ $.Values.image_pull_policy }}
   {{- if $portlist }}

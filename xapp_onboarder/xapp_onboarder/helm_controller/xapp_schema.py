@@ -108,11 +108,32 @@ schema = {
                     },
                     "command": {
                         "$id": "#/properties/containers/items/properties/command",
-                        "type": "string",
-                        "title": "Command To Run The xApp Container",
-                        "default": "command",
-                        "examples": [
-                            "command"
+                        "type": "array",
+                        "items": [
+                            {
+                                "$id": "#/properties/containers/items/properties/command/item",
+                                "type": "string",
+                                "title": "The Command Item",
+                                "default": "/bin/sh",
+                                "examples": [
+                                    "/bin/sh"
+                                ]
+                            }
+                        ]
+                    },
+                    "args": {
+                        "$id": "#/properties/containers/items/properties/args",
+                        "type": "array",
+                        "items": [
+                            {
+                                "$id": "#/properties/containers/items/properties/args/item",
+                                "type": "string",
+                                "title": "The Command Arguement Item",
+                                "default": "-c",
+                                "examples": [
+                                    "-c"
+                                ]
+                            }
                         ]
                     }
                 }
