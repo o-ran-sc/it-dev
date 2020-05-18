@@ -46,7 +46,8 @@ config_file = {
                 "name": "o-ran-sc/ric-app-mc",
                 "tag": "1.0.2"
             },
-            "command": "/playpen/bin/container_start.sh"
+            "command": ["/bin/sh"],
+            "args": ["-c", "/playpen/bin/container_start.sh"]
         }
     ],
     "livenessProbe": {
