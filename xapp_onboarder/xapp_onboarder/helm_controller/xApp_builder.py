@@ -122,12 +122,11 @@ class xApp():
 
         for item in current_node.keys():
             if type(current_node.get(item)) is not dict:
-                current_node[item] = '{{ '+ helm_value_path +'.'+ item + ' | toJson }}'
+                current_node[item] = '{{ index '+ helm_value_path +' "'+ item + '" | toJson }}'
             else:
                 new_node_list = node_list.copy()
                 new_node_list.append(item)
                 self.recursive_convert_config_file(new_node_list)
-
 
 
     def append_config_to_config_map(self):
@@ -137,6 +136,7 @@ class xApp():
             indented_config_text = indent(config_file_json_text, 4)
             indented_config_text = re.sub(r"\"{{", '{{', indented_config_text)
             indented_config_text = re.sub(r"}}\"", '}}', indented_config_text)
+            indented_config_text = re.sub(r"\\", '', indented_config_text)
             outputfile.write("  config-file.json: |\n")
             outputfile.write(indented_config_text)
             outputfile.write("\n  schema.json: |\n")
@@ -162,7 +162,10 @@ class xApp():
             for probes in ['readinessProbe', 'livenessProbe']:
                 if self.configmap_config_json_file.get(probes):
                     probe_definition = self.configmap_config_json_file.get(probes)
-                    probe_definition_yaml = yaml.dump(probe_definition)
+                    probe_definition_yaml = yaml.dump(probe_definition, width=1000)
+
+                    print(probe_definition_yaml)
+
                     indented_probe_definition_yaml = indent(probe_definition_yaml, 12)
                     indented_probe_definition_yaml = re.sub(r" \| toJson", '', indented_probe_definition_yaml)
                     indented_probe_definition_yaml = re.sub(r"'", '', indented_probe_definition_yaml)

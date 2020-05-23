@@ -38,6 +38,11 @@ controls_schema_file = {
 config_file = {
     "xapp_name": "test_xapp",
     "version": "1.0.0",
+	"annotations": {
+	  "prometheus.io/path": "/ric/v1/metrics",
+      "prometheus.io/port": "8080",
+      "prometheus.io/scrape": "true"
+	},
     "containers": [
         {
             "name": "mcxapp",

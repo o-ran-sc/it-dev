@@ -30,6 +30,17 @@ spec:
       release: {{ .Release.Name }}
   template:
     metadata:
+      {{- if .Values.annotations }}
+      annotations:
+        {{- range $key, $value := .Values.annotations }}
+          {{- if kindIs "string" $value }}
+        {{ $key }}: {{ $value | toPrettyJson }}
+          {{- else }}
+        {{ $key }}: |
+{{- $value | toPrettyJson | nindent 10 }}
+          {{- end }}
+        {{- end -}}
+      {{ end }}
       labels:
         app: {{ include "ricxapp.namespace" . }}-{{ include "ricxapp.name" . }}
         release: {{ .Release.Name }}

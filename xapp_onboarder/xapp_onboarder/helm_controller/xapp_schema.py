@@ -44,6 +44,22 @@ schema = {
             ],
             "pattern": "^(0|[1-9]\\d*)\\.(0|[1-9]\\d*)\\.(0|[1-9]\\d*)(?:-((?:0|[1-9]\\d*|\\d*[a-zA-Z-][0-9a-zA-Z-]*)(?:\\.(?:0|[1-9]\\d*|\\d*[a-zA-Z-][0-9a-zA-Z-]*))*))?(?:\\+([0-9a-zA-Z-]+(?:\\.[0-9a-zA-Z-]+)*))?$"
         },
+        "annotations": {
+            "$id": "#/properties/annotation",
+            "type": "object",
+            "title": "The k8s pod annotation",
+            "additionalProperties": {
+                "anyOf": [
+                    { "type": "string" },
+                    {
+                        "type": "array",
+                        "items": {
+                            "type": "object"
+                        }
+                    }
+                ]
+            }
+        },
         "containers": {
             "$id": "#/properties/containers",
             "type": "array",
