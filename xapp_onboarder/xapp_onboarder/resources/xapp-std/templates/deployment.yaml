@@ -43,6 +43,7 @@ spec:
       {{ end }}
       labels:
         app: {{ include "ricxapp.namespace" . }}-{{ include "ricxapp.name" . }}
+        kubernetes_name: {{ include "ricxapp.namespace" . }}_{{ include "ricxapp.name" . }}
         release: {{ .Release.Name }}
     spec:
       hostname: {{ include "ricxapp.name" . }}
