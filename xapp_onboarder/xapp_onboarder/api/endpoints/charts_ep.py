@@ -32,7 +32,7 @@ class ChartsList(Resource):
     @api.response(500, 'Get helm chart list failed', error_message_model)
     def get(self):
         """
-        Returns the list of charts that have been onboarded.
+        Returns the list of xApp helm charts that have been onboarded.
         """
 
         return get_charts_list()
@@ -41,11 +41,11 @@ class ChartsList(Resource):
 @ns.route('/xapp/<string:xapp_chart_name>')
 class VersionList(Resource):
 
-    @api.response(200, 'Get helm chart list OK')
-    @api.response(500, 'Get helm chart list failed', error_message_model)
+    @api.response(200, 'Get helm chart OK')
+    @api.response(500, 'Get helm chart failed', error_message_model)
     def get(self, xapp_chart_name):
         """
-        Returns the list of charts that have been onboarded.
+        Returns the helm chart for the specified xApp.
         """
         return get_charts_list(xapp_chart_name=xapp_chart_name)
 
@@ -58,7 +58,7 @@ class ChartsFetcher(Resource):
     @api.produces(['application/gzip'])
     def get(self, xapp_chart_name, version):
         """
-        Returns the helm charts that have been onboarded.
+        Returns the helm chart for the specified xApp and version.
         """
 
         content, status = download_chart_package(xapp_chart_name=xapp_chart_name, version=version)
@@ -81,7 +81,7 @@ class ValuesYamlFetcher(Resource):
     @api.produces(['text/x-yaml'])
     def get(self, xapp_chart_name, version):
         """
-        Returns the values.yaml file of the xApp
+        Returns the helm values.yaml file of the specified xApp and version.
         """
 
         content, status = download_values_yaml(xapp_chart_name=xapp_chart_name, version=version)

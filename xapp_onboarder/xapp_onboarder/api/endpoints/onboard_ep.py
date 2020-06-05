@@ -45,7 +45,7 @@ class OnboardxApps(Resource):
     @api.expect(request_models.xapp_descriptor_post, validate=True)
     def post(self):
         """
-        Onboard xApp with the xApp descriptor and its scehma included in the Json body
+        Onboard xApp using the xApp descriptor and schema in the request body.
         """
         config_file = request.json.get('config-file.json')
         controls_schema_file = request.json.get('controls-schema.json')
@@ -62,10 +62,9 @@ class OnboardxAppsDownload(Resource):
     @api.expect(request_models.xapp_descriptor_download_post, validate=True)
     def post(self):
         """
-        Onboard xApp with xApp descriptor and schema downloading URLs
+        Onboard xApp after downloading the xApp descriptor and schema from the URLs.
         """
         config_file_url = request.json.get('config-file.json_url')
         controls_schema_url = request.json.get('controls-schema.json_url')
 
         return download_config_and_schema_and_onboard(config_file_url, controls_schema_url)
-

@@ -41,4 +41,3 @@ class HealthCheck(Resource):
                                          status = "Service not ready.")
             return response_message.get_return()
         return response(model = status_message_model, status_code = 200, status= "OK").get_return()
-
