@@ -37,7 +37,10 @@ paths:
       responses:
         200:
           description: Get helm chart list OK
-          content: {}
+          content:
+            application/json:
+              schema:
+                type: object
         500:
           description: Get helm chart list failed
           content:
@@ -60,7 +63,10 @@ paths:
       responses:
         200:
           description: Get helm chart OK
-          content: {}
+          content:
+            application/json:
+              schema:
+                type: object
         500:
           description: Get helm chart failed
           content:
@@ -88,7 +94,10 @@ paths:
       responses:
         200:
           description: Get helm chart package OK
-          content: {}
+          content:
+            application/json:
+              schema:
+                type: object
         500:
           description: Get helm chart package failed
           content:
@@ -117,7 +126,10 @@ paths:
       responses:
         200:
           description: Get helm chart values.yaml OK
-          content: {}
+          content:
+            application/json:
+              schema:
+                type: object
         500:
           description: Get helm chart values.yaml failed
           content:
@@ -276,7 +288,13 @@ components:
   responses:
     MaskError:
       description: When any error occurs on mask
-      content: {}
+      content:
+        application/json:
+          schema:
+            type: object
     ParseError:
       description: When a mask can't be parsed
-      content: {}
+      content:
+        application/json:
+          schema:
+            type: object
