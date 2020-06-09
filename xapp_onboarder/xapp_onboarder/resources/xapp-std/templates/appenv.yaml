@@ -23,4 +23,4 @@ data:
   {{- end }}
   RMR_RTG_SVC: "4561"
   XAPP_DESCRIPTOR_PATH: {{ .Values.appconfig.path }}
-  RMR_SRC_ID: {{ include "ricxapp.servicename" . }}-rmr
+  RMR_SRC_ID: {{ include "ricxapp.servicename" . }}-rmr.{{ include "ricxapp.namespace" . }}:4560
