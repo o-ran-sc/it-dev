@@ -29,6 +29,12 @@ Change logs
 |1.0.1       | May 13 2020  | **Bug fix:** add a work-around for backward compatibility. Now xapp onboarder writes the xApp   |
 |            |              | descriptor and schema json files into xApp helm charts.                                         |
 +------------+--------------+-------------------------------------------------------------------------------------------------+
+|1.0.7       | Jun 15 2020  | **Bug fix:** fix the xApp service name for appmgr backward compatibility.                       |
+|            |              | **Feture add:** add RMR source name environment variable.                                       |
+|            |              |                 add lable for VESPAMGR to report xapp name.                                     |
+|            |              |                 add option to inject annotation.                                                |
+|            |              |                 add option to inject command parameters.                                        |
++------------+--------------+-------------------------------------------------------------------------------------------------+
 
 Configurations
 --------------
