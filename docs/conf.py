@@ -21,3 +21,12 @@ linkcheck_ignore = [
     'https://gerrit.o-ran-sc.org.*'
 ]
 
+rst_prolog = """
+.. include:: <s5defs.txt>
+.. default-role::
+
+"""
+
+html_css_files = ['css/s4defs-roles.css']
+
+extensions = ['sphinxcontrib.contentui']
