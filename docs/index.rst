@@ -21,4 +21,5 @@ The following is a list of projects hosted by this repo.
    :maxdepth: 1
 
    xapp_onboarder/index.rst
+   release-notes.rst
 
