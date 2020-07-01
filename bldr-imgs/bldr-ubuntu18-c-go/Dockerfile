@@ -57,13 +57,13 @@ RUN wget -nv https://dl.google.com/go/go${g12}.linux-amd64.tar.gz \
     && mv go /opt/go/1.12 \
     && rm -f go*.gz
 
-ARG g13="1.13.10"
+ARG g13="1.13.12"
 RUN wget -nv https://dl.google.com/go/go${g13}.linux-amd64.tar.gz \
     && tar -xf go${g13}.linux-amd64.tar.gz \
     && mv go /opt/go/1.13 \
     && rm -f go*.gz
 
-ARG g14="1.14.2"
+ARG g14="1.14.4"
 RUN wget -nv https://dl.google.com/go/go${g14}.linux-amd64.tar.gz \
     && tar -xf go${g14}.linux-amd64.tar.gz \
     && mv go /opt/go/1.14 \
