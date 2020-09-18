@@ -241,6 +241,7 @@ components:
       required:
       - version
       - xapp_name
+      - containers
       type: object
       properties:
         xapp_name:
@@ -250,6 +251,34 @@ components:
           pattern: ^(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)(?:-((?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*)(?:\.(?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*))*))?(?:\+([0-9a-zA-Z-]+(?:\.[0-9a-zA-Z-]+)*))?$
           type: string
           description: Version of the xApp chart
+        containers:
+          type: object
+          properties: {}
+          description: list of containers that the xApp will run
+        controls:
+          type: object
+          properties: {}
+          description: internal configuration of the xApp
+        metrics:
+          type: object
+          properties: {}
+          description: metrics provided by the xApp
+        messaging:
+          type: object
+          properties: {}
+          description: communication ports for each containers
+        livenessProbe:
+          type: object
+          properties: {}
+          description: liveness probe
+        readinessProbe:
+          type: object
+          properties: {}
+          description: readiness probe
+        rmr:
+          type: object
+          properties: {}
+          description: rmr info          
     error_message:
       required:
       - error_message
