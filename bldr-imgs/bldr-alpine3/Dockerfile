@@ -29,7 +29,7 @@ RUN apk update && apk add \
   libtool \
   ninja \
   pkgconfig \
-  python-dev \
+  python3-dev \
   sudo \
   git \
   go
