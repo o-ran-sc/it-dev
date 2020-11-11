@@ -209,7 +209,12 @@ class xApp():
         self.change_chart_name_version()
         self.helm_lint()
         try:
-            process = subprocess.run([self.helm_client_path, "package", self.chart_workspace_path + "/" + self.chart_name, "-d"
+
+            if os.environ.get('HELM_VERSION').startswith("3") == True: 
+                process = subprocess.run([self.helm_client_path, "package", self.chart_workspace_path + "/" + self.chart_name, "-d"
+                                 ,self.chart_workspace_path], stdout=PIPE, stderr=PIPE, check=True)
+            else:
+                process = subprocess.run([self.helm_client_path, "package", self.chart_workspace_path + "/" + self.chart_name, "-d"
                                ,self.chart_workspace_path,"--save=false"], stdout=PIPE, stderr=PIPE, check=True)
 
         except OSError as err:
