@@ -17,11 +17,11 @@
 FROM python:3.7-alpine
 
 ADD ./xapp_onboarder /opt/xapp_onboarder
-
 RUN cd /opt/xapp_onboarder && pip3 install . && rm -r /opt/xapp_onboarder
 
 ARG HELM_VERSION="2.12.3"
+ENV HELM_VERSION=${HELM_VERSION}
 
-RUN wget https://storage.googleapis.com/kubernetes-helm/helm-v${HELM_VERSION}-linux-amd64.tar.gz && tar -xvf helm-v${HELM_VERSION}-linux-amd64.tar.gz && mv linux-amd64/helm /usr/local/bin/helm && rm -r linux-amd64 && rm helm-v${HELM_VERSION}-linux-amd64.tar.gz
+RUN wget https://get.helm.sh/helm-v${HELM_VERSION}-linux-amd64.tar.gz && tar -xvf helm-v${HELM_VERSION}-linux-amd64.tar.gz && mv linux-amd64/helm /usr/local/bin/helm && rm -r linux-amd64 && rm helm-v${HELM_VERSION}-linux-amd64.tar.gz
 
 ENTRYPOINT ["xapp_onboarder"]
