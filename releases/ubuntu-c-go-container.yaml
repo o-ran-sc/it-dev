@@ -1,0 +1,11 @@
+---
+distribution_type: container
+container_release_tag: 1.9.0
+container_pull_registry: nexus3.o-ran-sc.org:10004
+container_push_registry: nexus3.o-ran-sc.org:10002
+project: it/dev
+ref: 7b84e3f087f9a602104520bb29bd2d3701cfebeb
+tag_release: false
+containers:
+    - name: bldr-ubuntu18-c-go
+      version: 1.9.0
