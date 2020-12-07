@@ -18,12 +18,14 @@
 # Has:
 # golang 1.13.8
 # alpine 3.11
-# rmr 3.x
+# rmr 4.4.6
 
 # install a well known working rmr
 FROM golang:1.13.8-alpine3.11
+
 RUN apk update && apk add autoconf automake build-base cmake libtool ninja pkgconfig git sudo
-RUN git clone --branch 3.7.1 https://gerrit.oran-osc.org/r/ric-plt/lib/rmr \
+
+RUN git clone --branch 4.4.6 https://gerrit.oran-osc.org/r/ric-plt/lib/rmr \
     && cd rmr \
     && mkdir .build; cd .build \
     && echo "<<<installing rmr devel headers>>>" \
