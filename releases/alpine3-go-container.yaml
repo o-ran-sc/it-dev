@@ -1,0 +1,11 @@
+---
+distribution_type: container
+container_release_tag: 2.0.0
+container_pull_registry: nexus3.o-ran-sc.org:10004
+container_push_registry: nexus3.o-ran-sc.org:10002
+project: it/dev
+ref: 45ee411da14af02b02aedcd70640847bf93e9d9a
+tag_release: false
+containers:
+    - name: bldr-alpine3-go
+      version: 2.0.0
