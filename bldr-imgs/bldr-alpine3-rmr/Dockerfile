@@ -40,7 +40,7 @@
 
 FROM alpine:3.11 as bldr
 RUN apk update && apk add autoconf automake build-base cmake libtool pkgconfig git sudo
-RUN git clone --branch 4.4.6 https://gerrit.oran-osc.org/r/ric-plt/lib/rmr \
+RUN git clone --branch 4.5.2 https://gerrit.oran-osc.org/r/ric-plt/lib/rmr \
     && cd rmr \
     && mkdir .build; cd .build \
     && echo "<<<installing rmr devel headers>>>" \
