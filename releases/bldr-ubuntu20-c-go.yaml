@@ -1,0 +1,11 @@
+---
+distribution_type: container
+container_release_tag: 1.0.0
+container_pull_registry: nexus3.o-ran-sc.org:10004
+container_push_registry: nexus3.o-ran-sc.org:10002
+project: it/dev
+ref: 47428b01b3c53a1f747ce2345a4b0282b8c6c3f2
+tag_release: false
+containers:
+    - name: bldr-ubuntu20-c-go
+      version: 1.0.0
