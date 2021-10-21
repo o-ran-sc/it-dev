@@ -16,6 +16,23 @@
       "message": "cmake pkg is here and also line 30. Why twice?",
       "revId": "bfa468f75ef80fa4a86f8e7ac47f9900b7c1d172",
       "serverId": "84e4e190-e623-4c37-9eda-58b1937c1b53"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3147475c_24398e67",
+        "filename": "bldr-imgs/bldr-ubuntu20-c-go/Dockerfile",
+        "patchSetId": 1
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2021-10-21T12:52:00Z",
+      "side": 1,
+      "message": "Should g16 be g17 in this line and above line?",
+      "revId": "bfa468f75ef80fa4a86f8e7ac47f9900b7c1d172",
+      "serverId": "84e4e190-e623-4c37-9eda-58b1937c1b53"
     }
   ]
 }
