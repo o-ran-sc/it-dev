@@ -18,6 +18,24 @@
       "serverId": "84e4e190-e623-4c37-9eda-58b1937c1b53"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "181a0454_433e3e58",
+        "filename": "bldr-imgs/bldr-ubuntu20-c-go/Dockerfile",
+        "patchSetId": 1
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 1000011
+      },
+      "writtenOn": "2021-10-25T05:39:42Z",
+      "side": 1,
+      "message": "fixed",
+      "parentUuid": "38f80f56_58c3cc29",
+      "revId": "bfa468f75ef80fa4a86f8e7ac47f9900b7c1d172",
+      "serverId": "84e4e190-e623-4c37-9eda-58b1937c1b53"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "3147475c_24398e67",
@@ -31,6 +49,24 @@
       "writtenOn": "2021-10-21T12:52:00Z",
       "side": 1,
       "message": "Should g16 be g17 in this line and above line?",
+      "revId": "bfa468f75ef80fa4a86f8e7ac47f9900b7c1d172",
+      "serverId": "84e4e190-e623-4c37-9eda-58b1937c1b53"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "eed35df5_bbddfdcc",
+        "filename": "bldr-imgs/bldr-ubuntu20-c-go/Dockerfile",
+        "patchSetId": 1
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 1000011
+      },
+      "writtenOn": "2021-10-25T05:39:42Z",
+      "side": 1,
+      "message": "fixed",
+      "parentUuid": "3147475c_24398e67",
       "revId": "bfa468f75ef80fa4a86f8e7ac47f9900b7c1d172",
       "serverId": "84e4e190-e623-4c37-9eda-58b1937c1b53"
     }
