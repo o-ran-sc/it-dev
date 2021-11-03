@@ -16,6 +16,23 @@
       "message": "Looks good to me.",
       "revId": "7c17088822038307f646efb70a29489d201bb493",
       "serverId": "84e4e190-e623-4c37-9eda-58b1937c1b53"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "dba98173_2a1f2e1e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000047
+      },
+      "writtenOn": "2021-11-03T13:36:05Z",
+      "side": 1,
+      "message": "looks ok to me, +2\u0027ing at Thoralf\u0027s request",
+      "revId": "7c17088822038307f646efb70a29489d201bb493",
+      "serverId": "84e4e190-e623-4c37-9eda-58b1937c1b53"
     }
   ]
 }
