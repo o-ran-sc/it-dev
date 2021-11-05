@@ -16,6 +16,23 @@
       "message": "Looks good to me.",
       "revId": "61bc581ff80e2fa2660bd851bcc49a364bd85b77",
       "serverId": "84e4e190-e623-4c37-9eda-58b1937c1b53"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5397dd03_45ba3e3d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000047
+      },
+      "writtenOn": "2021-11-05T12:39:05Z",
+      "side": 1,
+      "message": "Merging per request from thoralf.czichy@nokia.com",
+      "revId": "61bc581ff80e2fa2660bd851bcc49a364bd85b77",
+      "serverId": "84e4e190-e623-4c37-9eda-58b1937c1b53"
     }
   ]
 }
