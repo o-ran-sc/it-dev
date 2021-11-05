@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f1574fb6_194d5801",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1001064
+      },
+      "writtenOn": "2021-11-05T19:32:15Z",
+      "side": 1,
+      "message": "As the new INT PTL I\u0027m adding myself and my colleague to the committer list for the it/dev repo. Please approve. Thanks!",
+      "revId": "78a7c240937c3180355b18cba58eb4cc9a1ac0e0",
+      "serverId": "84e4e190-e623-4c37-9eda-58b1937c1b53"
+    }
+  ]
+}
