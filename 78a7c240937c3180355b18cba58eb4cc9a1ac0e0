@@ -33,6 +33,23 @@
       "message": "I know Matti and Thoralf have endorsed this, but I\u0027d like them to +1 the change just to have a sort of official sign-off on it, so I\u0027ve added them as reviewers.\n",
       "revId": "78a7c240937c3180355b18cba58eb4cc9a1ac0e0",
       "serverId": "84e4e190-e623-4c37-9eda-58b1937c1b53"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4ee8187f_99c0473e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000108
+      },
+      "writtenOn": "2021-11-06T08:04:27Z",
+      "side": 1,
+      "message": "ok, as approved in the TOC meeting from 2021-10-20 in 5.b.iv.3\nhttps://wiki.o-ran-sc.org/display/TOC\n",
+      "revId": "78a7c240937c3180355b18cba58eb4cc9a1ac0e0",
+      "serverId": "84e4e190-e623-4c37-9eda-58b1937c1b53"
     }
   ]
 }
