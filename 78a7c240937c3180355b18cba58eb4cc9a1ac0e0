@@ -50,6 +50,23 @@
       "message": "ok, as approved in the TOC meeting from 2021-10-20 in 5.b.iv.3\nhttps://wiki.o-ran-sc.org/display/TOC\n",
       "revId": "78a7c240937c3180355b18cba58eb4cc9a1ac0e0",
       "serverId": "84e4e190-e623-4c37-9eda-58b1937c1b53"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1b370d7c_beef75d9",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000046
+      },
+      "writtenOn": "2021-11-06T21:36:17Z",
+      "side": 1,
+      "message": "I can merge if you guys are OK with the number of +1 here.",
+      "revId": "78a7c240937c3180355b18cba58eb4cc9a1ac0e0",
+      "serverId": "84e4e190-e623-4c37-9eda-58b1937c1b53"
     }
   ]
 }
