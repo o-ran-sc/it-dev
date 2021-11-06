@@ -16,6 +16,23 @@
       "message": "As the new INT PTL I\u0027m adding myself and my colleague to the committer list for the it/dev repo. Please approve. Thanks!",
       "revId": "78a7c240937c3180355b18cba58eb4cc9a1ac0e0",
       "serverId": "84e4e190-e623-4c37-9eda-58b1937c1b53"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "87fb74aa_566e3c37",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000047
+      },
+      "writtenOn": "2021-11-06T01:37:06Z",
+      "side": 1,
+      "message": "I know Matti and Thoralf have endorsed this, but I\u0027d like them to +1 the change just to have a sort of official sign-off on it, so I\u0027ve added them as reviewers.\n",
+      "revId": "78a7c240937c3180355b18cba58eb4cc9a1ac0e0",
+      "serverId": "84e4e190-e623-4c37-9eda-58b1937c1b53"
     }
   ]
 }
