@@ -67,6 +67,24 @@
       "message": "I can merge if you guys are OK with the number of +1 here.",
       "revId": "78a7c240937c3180355b18cba58eb4cc9a1ac0e0",
       "serverId": "84e4e190-e623-4c37-9eda-58b1937c1b53"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5b31ec11_4ceab1a7",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000108
+      },
+      "writtenOn": "2021-11-08T10:10:01Z",
+      "side": 1,
+      "message": "Actually I notice now that it would be better to update the section \"PTL\" with your name, James. In line 6 to 12 of the INFO.yaml file. And then Weisen Pan in the committer section (as done in this patchset now). PTLs automatically have committer (\u003d\"merge\") rights as well.",
+      "parentUuid": "4ee8187f_99c0473e",
+      "revId": "78a7c240937c3180355b18cba58eb4cc9a1ac0e0",
+      "serverId": "84e4e190-e623-4c37-9eda-58b1937c1b53"
     }
   ]
 }
