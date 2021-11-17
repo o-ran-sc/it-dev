@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6ef3e372_0e7733b9",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1001588
+      },
+      "writtenOn": "2021-11-17T14:34:50Z",
+      "side": 1,
+      "message": "Hi Scott.\n\nCould you please take a look at the merge conflict? \nI also have an ubuntu20.04 builder-image arm-based dockerfile that I would like to commit next.\n\nThanks!",
+      "revId": "7f051e4e961803ed934e74e8f67bf6977b5d0f26",
+      "serverId": "84e4e190-e623-4c37-9eda-58b1937c1b53"
+    }
+  ]
+}
