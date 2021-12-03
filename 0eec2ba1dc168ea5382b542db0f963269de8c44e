@@ -16,6 +16,23 @@
       "message": "I forwarded the request to Felix\u0027s new email address.",
       "revId": "0eec2ba1dc168ea5382b542db0f963269de8c44e",
       "serverId": "84e4e190-e623-4c37-9eda-58b1937c1b53"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "062c17b8_79b1b7a6",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000014
+      },
+      "writtenOn": "2021-12-03T15:36:40Z",
+      "side": 1,
+      "message": "While you are updating committers, please remove me as a committer from this repo.",
+      "revId": "0eec2ba1dc168ea5382b542db0f963269de8c44e",
+      "serverId": "84e4e190-e623-4c37-9eda-58b1937c1b53"
     }
   ]
 }
