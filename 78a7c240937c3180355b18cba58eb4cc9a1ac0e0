@@ -85,6 +85,42 @@
       "parentUuid": "4ee8187f_99c0473e",
       "revId": "78a7c240937c3180355b18cba58eb4cc9a1ac0e0",
       "serverId": "84e4e190-e623-4c37-9eda-58b1937c1b53"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ae2772e4_5f26c62e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1001064
+      },
+      "writtenOn": "2021-12-03T14:29:51Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5b31ec11_4ceab1a7",
+      "revId": "78a7c240937c3180355b18cba58eb4cc9a1ac0e0",
+      "serverId": "84e4e190-e623-4c37-9eda-58b1937c1b53"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f1caa4e1_9dd7d247",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1001064
+      },
+      "writtenOn": "2021-12-03T14:29:51Z",
+      "side": 1,
+      "message": "would you please merge after my latest change per Thoralf\u0027s feedback?",
+      "parentUuid": "1b370d7c_beef75d9",
+      "revId": "78a7c240937c3180355b18cba58eb4cc9a1ac0e0",
+      "serverId": "84e4e190-e623-4c37-9eda-58b1937c1b53"
     }
   ]
 }
