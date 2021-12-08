@@ -33,6 +33,24 @@
       "message": "While you are updating committers, please remove me as a committer from this repo.",
       "revId": "0eec2ba1dc168ea5382b542db0f963269de8c44e",
       "serverId": "84e4e190-e623-4c37-9eda-58b1937c1b53"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7c3e2ace_d3a7dc86",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000108
+      },
+      "writtenOn": "2021-12-08T14:38:13Z",
+      "side": 1,
+      "message": "I would suggest we do this after the PTL change in this one. If James promises to do that, I would support merging this one now.",
+      "parentUuid": "062c17b8_79b1b7a6",
+      "revId": "0eec2ba1dc168ea5382b542db0f963269de8c44e",
+      "serverId": "84e4e190-e623-4c37-9eda-58b1937c1b53"
     }
   ]
 }
