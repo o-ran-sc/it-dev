@@ -51,6 +51,23 @@
       "parentUuid": "062c17b8_79b1b7a6",
       "revId": "0eec2ba1dc168ea5382b542db0f963269de8c44e",
       "serverId": "84e4e190-e623-4c37-9eda-58b1937c1b53"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1648fcad_4a1719c5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000050
+      },
+      "writtenOn": "2022-05-04T14:08:15Z",
+      "side": 1,
+      "message": "It seems this was never merged - if you remove Chris Lott, he would change his vote to +1.\n",
+      "revId": "0eec2ba1dc168ea5382b542db0f963269de8c44e",
+      "serverId": "84e4e190-e623-4c37-9eda-58b1937c1b53"
     }
   ]
 }
