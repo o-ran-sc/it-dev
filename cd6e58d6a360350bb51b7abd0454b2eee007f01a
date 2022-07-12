@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "eee60da1_63d9e74f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000047
+      },
+      "writtenOn": "2022-07-12T17:28:29Z",
+      "side": 1,
+      "message": "this seems fine to me; my only concern is whether any other packages might depend on the prior version, so i would suggest adding reviewers from things with RMR dependencies.",
+      "revId": "cd6e58d6a360350bb51b7abd0454b2eee007f01a",
+      "serverId": "84e4e190-e623-4c37-9eda-58b1937c1b53"
+    }
+  ]
+}
