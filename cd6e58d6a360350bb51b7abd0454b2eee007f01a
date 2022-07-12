@@ -33,6 +33,24 @@
       "message": "It is problematic if there is no builder image for the current RMR version if the current version contains breaking changes compared to the latest available tag.\nThere are tons of old tags still available and I\u0027m not proposing to get rid of them. (see https://nexus3.o-ran-sc.org/#browse/search\u003dkeyword%3Dbldr-alpine3-rmr)",
       "revId": "cd6e58d6a360350bb51b7abd0454b2eee007f01a",
       "serverId": "84e4e190-e623-4c37-9eda-58b1937c1b53"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "43252c1e_6622dff6",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1001844
+      },
+      "writtenOn": "2022-07-12T18:37:02Z",
+      "side": 1,
+      "message": "It is problematic if there is no builder image for the current RMR version if the current version contains breaking changes compared to the latest available tag.\nThere are tons of old tags still available and I\u0027m not proposing to get rid of them. (see https://nexus3.o-ran-sc.org/#browse/search\u003dkeyword%3Dbldr-alpine3-rmr)",
+      "parentUuid": "eee60da1_63d9e74f",
+      "revId": "cd6e58d6a360350bb51b7abd0454b2eee007f01a",
+      "serverId": "84e4e190-e623-4c37-9eda-58b1937c1b53"
     }
   ]
 }
