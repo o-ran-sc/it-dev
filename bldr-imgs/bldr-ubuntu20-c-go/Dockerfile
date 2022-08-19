@@ -61,16 +61,22 @@ RUN wget -nv https://dl.google.com/go/go${g16}.linux-amd64.tar.gz \
     && mv go /opt/go/1.16 \
     && rm -f go*.gz
 
-ARG g17="1.17.1"
+ARG g17="1.17.10"
 RUN wget -nv https://dl.google.com/go/go${g17}.linux-amd64.tar.gz \
     && tar -xf go${g17}.linux-amd64.tar.gz \
     && mv go /opt/go/1.17 \
     && rm -f go*.gz
 
-# Default path has go version 1.16.x
+ARG g18="1.18.5"
+RUN wget -nv https://dl.google.com/go/go${g18}.linux-amd64.tar.gz \
+    && tar -xf go${g18}.linux-amd64.tar.gz \
+    && mv go /opt/go/1.18 \
+    && rm -f go*.gz
+
 # Use /opt/go/1.16/bin for version 1.16.x
 # Use /opt/go/1.17/bin for version 1.17.x
-ARG GOVERSION=1.16
+# Use /opt/go/1.18/bin for version 1.18.x (default)
+ARG GOVERSION=1.18
 ENV GOPATH=/root/go
 ENV DEFAULTPATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 ENV PATH=$DEFAULTPATH:/usr/local/go/bin:/opt/go/${GOVERSION}/bin:$GOPATH/bin
@@ -78,8 +84,9 @@ ENV PATH=$DEFAULTPATH:/usr/local/go/bin:/opt/go/${GOVERSION}/bin:$GOPATH/bin
 # This installs go-acc to GOPATH
 RUN go version; \
     export GOBIN=/usr/local/bin/; export GO111MODULE=on;\
-    go get -v github.com/ory/go-acc \
+    go install github.com/ory/go-acc@master \
     && go-acc --help
+
 
 # sonar-scanner is not available in ubuntu repo
 ARG sv="4.2.0.1873"
