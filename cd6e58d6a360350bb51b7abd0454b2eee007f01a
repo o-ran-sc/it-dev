@@ -51,6 +51,23 @@
       "parentUuid": "eee60da1_63d9e74f",
       "revId": "cd6e58d6a360350bb51b7abd0454b2eee007f01a",
       "serverId": "84e4e190-e623-4c37-9eda-58b1937c1b53"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1ffa46eb_7aefc57c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1001844
+      },
+      "writtenOn": "2022-08-26T17:45:42Z",
+      "side": 1,
+      "message": "Could we please get this merged/resolved? Our work on the Rust xApp framework requires a current RMR version and this 4.5.2 version is *over 1.5 years old* and *breaking*...",
+      "revId": "cd6e58d6a360350bb51b7abd0454b2eee007f01a",
+      "serverId": "84e4e190-e623-4c37-9eda-58b1937c1b53"
     }
   ]
 }
