@@ -1,5 +1,23 @@
 {
-  "comments": [],
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c6ac3d93_3699f6e5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000108
+      },
+      "writtenOn": "2023-06-22T09:39:52Z",
+      "side": 1,
+      "message": "this was actually for lbdr-alpine3-GO, not as in the commit message for python. I start another review for python. In which I revert the \"go\" changes",
+      "revId": "4dd1f5f446978678d3f2f8717654cad8e6ad10f8",
+      "serverId": "84e4e190-e623-4c37-9eda-58b1937c1b53"
+    }
+  ],
   "submitRequirementResults": [
     {
       "submitRequirement": {
