@@ -4,8 +4,8 @@ container_release_tag: 4.5.2
 container_pull_registry: nexus3.o-ran-sc.org:10004
 container_push_registry: nexus3.o-ran-sc.org:10002
 project: it/dev
-ref: a9b4e2aca7fdaae20d576805e136a17342f4c625
+ref: 558194270787ab09b16d5a3f0e4052cb743783d8
 tag_release: false
 containers:
     - name: bldr-alpine3-rmr
-      version: 4.5.2
+      version: 4.6.0
