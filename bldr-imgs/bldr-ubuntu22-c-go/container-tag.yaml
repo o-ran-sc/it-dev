@@ -1,0 +1,8 @@
+# Not feasible to show all the software versions
+# here so just use a counter plus the base image
+# Sincce this is still experimental, we are using
+# the tag of 0.1.0. when we have enough testing
+# and there is confidence that the images can be
+# built with Ubuntu 22.04, we shall make it 1.0.0
+---
+tag: 0.1.0
