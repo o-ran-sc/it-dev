@@ -1,0 +1,11 @@
+---
+distribution_type: container
+container_release_tag: 0.1.0
+container_pull_registry: nexus3.o-ran-sc.org:10004
+container_push_registry: nexus3.o-ran-sc.org:10002
+project: it/dev
+ref: eef3db9b8e0b8b3d421b7e37ed4fdf5046675539
+tag_release: false
+containers:
+    - name: bldr-ubuntu22-c-go
+      version: 0.1.0
